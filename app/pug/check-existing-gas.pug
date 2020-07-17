@@ -1,0 +1,26 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_signup.js' type="module")
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 家中是否已有瓦斯桶
+block main-content
+	.signup__check-gas.default-bg
+		.check-gas--gas-img
+			img(src="images/empty-gas-can.png")
+			p 家中是否已有瓦斯桶？
+		.check-gas--radio-input
+			.check-gas--radio-input__wrap
+				label.check-gas--radio-input__label 有
+					input(type="radio" name="checkGas" value="hasGas" checked)
+					span.radio-checkmark
+				label.check-gas--radio-input__label 沒有
+					input(type="radio" name="checkGas" value="noGas")
+					span.radio-checkmark
+		.check-gas--confirm-btn
+			button#signupCheckGas 確認
+		.check-gas--notice
+			p 提醒您:
+			p 若您的瓦斯桶跟前家瓦斯行有押金，建議先將桶子退回前一家瓦斯行將押金取回，再用押金與瓦斯通合作。當不使用瓦斯通服務時，押金將全額退回。

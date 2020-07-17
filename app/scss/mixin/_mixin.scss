@@ -1,0 +1,174 @@
+// Font
+
+$x-small: 0.875em; //14px
+$root: 1em; //16px
+$small: 1.125em; //18px
+$medium: 1.25em; //20px
+$large: 1.375em; //22px
+$x-large: 1.5em; //24px
+$single-item-title: 2em; //32px
+$index-booking-title: 2.5em; //40px
+$member-signup: 3em; //48px
+$index-booking-cta: 4.375em; //70px
+$font-light: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+// Color
+
+$yellow: #f3df4a;
+$red: #ff3850;
+$gold: #e9bd32;
+$blue: #4465af;
+$green: #b6ded2;
+$gray: #666666;
+$inputBackgroundGray: #6f6f6f;
+$pink: #dab5d0;
+$brown: #8c6239;
+$subscriptionBG: #a39446;
+$backgroundGray: #dddddd;
+$shadow: #808080;
+$disable: #cccccc;
+$lightBlue: #29abe2;
+$borderGray: #3c3c3c;
+$orange: #d56a4f;
+$lightOrange: #d68d7a;
+$lightGreen: #def1eb;
+$darkGreen: #88b218;
+$textNotice: #cb371d;
+
+// Others
+
+$border-radius: 10px;
+$button-size: 1.25rem;
+$transition: 0.3s;
+
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin line {
+  display: inline-block;
+  width: $button-size;
+  height: $button-size/12;
+  background: $white;
+  border-radius: $button-size/12;
+  transition: $transition;
+}
+
+@mixin font($font-size: 1em, $font-weight: normal, $text-deco: none, $line-height: 1.2em) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-decoration: $text-deco;
+  line-height: $line-height;
+}
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property: $duration;
+  -o-transition-property: $duration;
+  -webkit-transition-property: $duration;
+  transition-property: $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function: $timing;
+  -o-transition-timing-function: $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function: $timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+@mixin circle($width, $margin, $height: 1.6em) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  -o-border-radius: $width/2;
+  border-radius: $width/2;
+  display: inline-block;
+  text-align: center;
+  margin: $margin;
+  line-height: $height;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .ratio-hack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gastom</title>
+    <script src="js/layout_signup-existing-gas-input.js" type="module"></script>
+  </head>
+  <body class="default-bg">
+    <div class="header"><a class="back-button" href="#"><img src="images/Back.svg" alt="back"></a>
+      <p>輸入自由桶數量</p>
+    </div>
+    <div class="signup__check-gas default-bg">
+      <div class="check-gas--gas-img-logo"><img src="images/gas-can-logo.png">
+        <p>自備瓦斯桶</p>
+      </div>
+      <div class="check-gas--gas-input"><span id="gasInputDecBtn">-</span>
+        <input type="text" value="0" disabled id="gasInputValue"><span id="gasInputIncBtn">+</span><span>桶</span>
+      </div>
+      <div class="check-gas--confirm-btn">
+        <button id="signupGasInput">確認</button>
+      </div>
+    </div>
+    <div class="signup__check-gas--popup popup-overlay-wrap">
+      <div class="signup__check-gas--popup-content">
+        <h3>提供自有桶請符合下列兩點:</h3>
+        <p>1、出廠耐壓試驗日期須大於民國 89 年。</p>
+        <p>2、下次檢驗期限於大於1個月,若小於1個月則需額外支付300元檢驗費。</p><img src="images/check-gas-img.png" alt="">
+        <button id="signupCheckGasPopup">了解</button>
+      </div>
+    </div>
+  </body>
+</html>

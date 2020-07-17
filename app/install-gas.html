@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gastom</title>
+    <script src="js/layout_install-gas.js" type="module"></script>
+  </head>
+  <body class="default-bg">
+    <div class="header"><a class="back-button" href="#"><img src="images/Back.svg" alt="back"></a>
+      <p>無償回收借新桶與安裝包</p>
+    </div>
+    <div class="install-gas default-bg">
+      <div class="install-gas--wrapper">
+        <div class="install-gas--gas-top">
+          <div class="gas-deposit">
+            <p class="gas-deposit--title">每桶押金</p>
+            <p class="gas-deposit--price"></p>
+          </div>
+          <div class="gas-img"><img src="images/install-gas.png"></div>
+          <div class="gas-price">
+            <p class="gas-price--title">瓦斯價格</p>
+            <p class="gas-price--price"></p>
+          </div>
+          <div class="gas-installation"><img src="images/gas-installation-icon.svg">
+            <p class="gas-installation--text">安裝包</p>
+            <p class="gas-installation--price"></p>
+          </div>
+          <div class="gas-rental">
+            <p class="gas-rental--quantity">借桶數</p>
+            <p class="gas-rental--text">1</p>
+            <p class="gas-rental--price">桶</p>
+          </div>
+        </div>
+        <div class="install-gas--input"><span id="installDecBtn">-</span>
+          <input type="text" value="1" disabled id="installValue"><span id="installIncBtn">+</span>
+        </div>
+        <div class="install-gas--detail">
+          <div class="install-gas--detail-description__deposit">
+            <p class="detail-title">押金桶說明</p>
+            <p class="detail-description__deposit">本方案使用國際安全認證新世代複合材料氣瓶，具備安全、輕量、美觀等優點，與一般鋼瓶不同，需依政府規定支付<span></span>瓶押金，如不需使用瓦斯通時，此氣瓶押金可申請退還。</p>
+          </div>
+          <div class="install-gas--detail-description__install">
+            <p class="detail-title">安裝包說明</p>
+            <p class="detail-description__install">本方案使用之新世代複合材料氣瓶，不同傳統鋼瓶，採用義大利品牌特殊瓦斯安全閥，<span>初次新用戶訂購需包含首次安裝包，並獨享優惠價</span>。第二次購買安裝包則需至商城購買</p>
+          </div>
+          <div class="install-gas--deposit-price">
+            <p>押桶 x <span class="install-price--deposit-quantity">1</span></p>
+            <p class="install-price--deposit-price"></p>
+          </div>
+          <div class="install-gas--install-price">
+            <p>安裝包 x <span class="install-price--installation-quantity">1</span></p>
+            <p class="install-price--installation-price"></p>
+          </div>
+          <div class="install-gas--gas-price">
+            <p>瓦斯價格 x <span class="install-price--gas-quantity">1</span></p>
+            <p class="install-price--gas-price"></p>
+          </div>
+          <div class="install-gas--additional">
+            <pre class="install-gas--comments"></pre>
+            <div class="install-gas--additional-buttons">
+              <button class="install-gas--comments-btn">備註</button><a class="install-gas--shop" href="#">加購瓦斯商品</a>
+            </div>
+          </div>
+          <div class="install-gas--total-price">
+            <p>確認金額</p>
+            <p class="install-price--total-price-value"></p>
+          </div>
+        </div>
+        <div class="install-gas--confirm"><a href="#">下一步 確認時段</a></div>
+      </div>
+    </div>
+    <div class="comments-overlay">
+      <div class="comments">
+        <div class="comments--cancel">
+          <button>X 取消</button>
+        </div>
+        <div class="comments--textarea">
+          <textarea rows="4" cols="50"></textarea>
+        </div>
+        <div class="comments--confirm">
+          <button>確認</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

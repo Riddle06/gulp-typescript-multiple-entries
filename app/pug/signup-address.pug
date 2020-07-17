@@ -1,0 +1,53 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_signup-address.js' type="module")
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 地址
+block main-content
+	.signup.default-bg.height-auto
+		.signup--form-address
+			.signup--form-address__input
+				select.signupCity
+				p.error-message 您未選擇縣市
+			.signup--form-address__input
+				select.signupCounty
+				p.error-message 您未選擇區域
+			.signup--form-address__input.form-address__input__multiple
+				input.signupRoadName(type="text")
+				select.signupRoadSelect
+					option(value="" selected disabled) 街/路
+					option(value="街") 街
+					option(value="路") 路
+			.signup--form-address__input.form-address__input__p
+				input.signupRoadSection(type="text")
+				p.form-address__p 段
+			.signup--form-address__input.form-address__input__p
+				input.signupRoadAlley(type="text")
+				p.form-address__p 巷
+			.signup--form-address__input.form-address__input__p
+				input.signupRoadSubAlley(type="text")
+				p.form-address__p 弄
+			.signup--form-address__input.form-address__input__p
+				input.signupRoadNumber(type="number")
+				p.form-address__p 號
+			.signup--form-address__input.form-address__input__last
+				input.signupRoadFloor(type="number")
+				p.form-address__p 樓之
+				input.signupRoadRoom(type="number")
+			p.error-message.error-message__road 請填入正確地址
+			.signup--form-address__elevator
+				p 有無電梯
+				.elevator-wrap
+					label.elevator-label 有電梯
+						input(type="radio" name="elevatorInput" value="hasElevator" checked)
+						span.radio-checkmark
+					label.elevator-label 無電梯
+						input(type="radio" name="elevatorInput" value="noElevator")
+						span.radio-checkmark
+			.signup--form__warning
+				p 請務必填寫正確完整之配送地址，確認後將不得任意更改。
+			.signup--form__confirm
+				button#confirmAddress 確認

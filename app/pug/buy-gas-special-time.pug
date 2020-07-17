@@ -1,0 +1,84 @@
+extend base/index-layout.pug
+
+block styles
+	link(rel='stylesheet', href='css/datepicker.min.css')
+block script
+	script(src='js/datepicker.min.js')
+	script(src='js/layout_buy-gas-time.js' type="module")
+	script.
+		document.addEventListener('DOMContentLoaded', () => {
+			Datepicker.locales.en = {
+				days: ["日", "一", "二", "三", "四", "五", "六"],
+				daysShort: ["日", "一", "二", "三", "四", "五", "六"],
+				daysMin: ["日", "一", "二", "三", "四", "五", "六"],
+				months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+				monthsShort: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+				today: "Today",
+				titleFormat: "MM",
+				format: "mm/dd/yyyy"
+			}
+			const elem = document.querySelector('#inline')
+			const datepicker = new Datepicker(elem, {
+				nextArrow: '►',
+				prevArrow: '►',
+				todayHighlight: true,
+				weekStart: 1,
+			})
+			const deliveryDateEl = document.querySelector('.buy-gas--delivery-date input')
+			elem.addEventListener('changeDate', function (e, details) { 
+				const periodSelectValue = document.querySelector('input[name="buyGasPeriod"]:checked')
+				const date = datepicker.getDate('y/m/d')
+				if (periodSelectValue) {
+					deliveryDateEl.setAttribute('value', `${date} ${periodSelectValue.value}`)
+				}
+			})
+			const periodSelect = document.querySelectorAll('input[name="buyGasPeriod"]')
+			for (let i = 0, len = periodSelect.length; i < len; i++) {
+				periodSelect[i].addEventListener('change', function(){
+					const date = datepicker.getDate('y/m/d')
+					if (date) {
+						deliveryDateEl.setAttribute('value', `${date} ${this.value}`)
+					}
+				})
+			}
+		});
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 選擇時段
+block main-content
+	.buy-gas--time.default-bg
+		.buy-gas--time-notice
+			p 首次訂購需物流士現場說明使用方式
+			p 僅能選擇上半場，物流士配送前將電話聯繫。
+		.buy-gas--time-period
+			label
+				input(type="radio" name="buyGasPeriod" value="08:00 - 20:00")#period1
+				.time-period--content
+					p 上半場
+					p 08:00 - 20:00
+			label
+				input(type="radio" name="buyGasPeriod" value="20:00 - 08:00")#period2
+				.time-period--content
+					p 下半場
+					p 20:00 - 08:00
+		.buy-gas--calendar
+			#inline
+		.buy-gas--delivery-date
+			input(type="text" placeholder="請選擇以上日期" value="" disabled)
+		.buy-gas--delivery-methods
+			p.delivery-method--title 配送狀態選項
+			label
+				input(type="radio" name="deliveryMethod" value="送至家中")
+				.delivery-method
+					p 送至家中
+			label
+				input(type="radio" name="deliveryMethod" value="在門口交換")
+				.delivery-method
+					p 在門口交換
+			label
+				input(type="radio" name="deliveryMethod" value="暫放門外")
+				.delivery-method
+					p 暫放門外
+		.buy-gas--confirm-delivery-time
+			a.disabled 確認時段

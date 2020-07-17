@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gastom</title>
+    <script src="js/layout_signup-address.js" type="module"></script>
+  </head>
+  <body class="default-bg">
+    <div class="header"><a class="back-button" href="#"><img src="images/Back.svg" alt="back"></a>
+      <p>地址</p>
+    </div>
+    <div class="signup default-bg height-auto">
+      <div class="signup--form-address">
+        <div class="signup--form-address__input">
+          <select class="signupCity"></select>
+          <p class="error-message">您未選擇縣市</p>
+        </div>
+        <div class="signup--form-address__input">
+          <select class="signupCounty"></select>
+          <p class="error-message">您未選擇區域</p>
+        </div>
+        <div class="signup--form-address__input form-address__input__multiple">
+          <input class="signupRoadName" type="text">
+          <select class="signupRoadSelect">
+            <option value="" selected disabled>街/路</option>
+            <option value="街">街</option>
+            <option value="路">路</option>
+          </select>
+        </div>
+        <div class="signup--form-address__input form-address__input__p">
+          <input class="signupRoadSection" type="text">
+          <p class="form-address__p">段</p>
+        </div>
+        <div class="signup--form-address__input form-address__input__p">
+          <input class="signupRoadAlley" type="text">
+          <p class="form-address__p">巷</p>
+        </div>
+        <div class="signup--form-address__input form-address__input__p">
+          <input class="signupRoadSubAlley" type="text">
+          <p class="form-address__p">弄</p>
+        </div>
+        <div class="signup--form-address__input form-address__input__p">
+          <input class="signupRoadNumber" type="number">
+          <p class="form-address__p">號</p>
+        </div>
+        <div class="signup--form-address__input form-address__input__last">
+          <input class="signupRoadFloor" type="number">
+          <p class="form-address__p">樓之</p>
+          <input class="signupRoadRoom" type="number">
+        </div>
+        <p class="error-message error-message__road">請填入正確地址</p>
+        <div class="signup--form-address__elevator">
+          <p>有無電梯</p>
+          <div class="elevator-wrap">
+            <label class="elevator-label">有電梯
+              <input type="radio" name="elevatorInput" value="hasElevator" checked><span class="radio-checkmark"></span>
+            </label>
+            <label class="elevator-label">無電梯
+              <input type="radio" name="elevatorInput" value="noElevator"><span class="radio-checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="signup--form__warning">
+          <p>請務必填寫正確完整之配送地址，確認後將不得任意更改。</p>
+        </div>
+        <div class="signup--form__confirm">
+          <button id="confirmAddress">確認</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

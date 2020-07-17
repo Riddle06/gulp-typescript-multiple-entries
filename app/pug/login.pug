@@ -1,0 +1,17 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_login.js' type="module")
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 會員登入
+block main-content
+	.signup.default-bg
+		.signup--form
+			p 請輸入手機號碼
+			.signup--form__input
+				span 09
+				input(type="tel" name="phone" autocomplete="off" maxlength="8")#loginTel.signup-input__tel
+		.signup--bottom
+			a(href="login-varification.html")#loginTelBtn 下一步

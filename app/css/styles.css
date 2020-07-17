@@ -1,0 +1,2449 @@
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.5; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .clearfix:after {
+    clear: both; }
+
+img {
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+.default-bg {
+  background: #111 url(../../images/default-bg.png) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: -50px; }
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px; }
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px; }
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s; }
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px; }
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s; }
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px; }
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s; }
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px; }
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s; }
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px; }
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s; }
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px; }
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s; }
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px; }
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s; }
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px; }
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s; }
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px; }
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+button, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none; }
+
+.input-select {
+  position: relative; }
+  .input-select select {
+    background: #3d3d3d url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 25 25' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right center !important;
+    background: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 25 25' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right center, -moz-linear-gradient(90deg, #3d3d3d 0%, black 100%) no-repeat !important;
+    background: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 25 25' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right center, -webkit-linear-gradient(90deg, #3d3d3d 0%, black 100%) no-repeat !important;
+    background: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 25 25' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right center, linear-gradient(90deg, #3d3d3d 0%, black 100%) no-repeat !important;
+    background-repeat: no-repeat;
+    background-position: right center; }
+
+.height-auto {
+  height: auto !important; }
+
+.popup-overlay-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7); }
+
+.menu,
+.right-menu {
+  -moz-transition: left, 0.3s;
+  -o-transition: left, 0.3s;
+  -webkit-transition: left, 0.3s;
+  transition: left, 0.3s;
+  width: 265px;
+  height: 100%;
+  position: fixed;
+  left: -265px;
+  top: 0;
+  background: black;
+  z-index: 99; }
+  .menu .left-menu-btn,
+  .right-menu .left-menu-btn {
+    position: fixed;
+    top: 1.1em;
+    left: 1.5em;
+    display: block;
+    height: 20px;
+    width: 20px; }
+    .menu .left-menu-btn span,
+    .right-menu .left-menu-btn span {
+      display: block;
+      width: 10px;
+      height: 1px;
+      background: #f3df4a;
+      position: absolute;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .menu .left-menu-btn span:nth-child(even),
+      .right-menu .left-menu-btn span:nth-child(even) {
+        left: 50%;
+        border-radius: 0 9px 9px 0; }
+      .menu .left-menu-btn span:nth-child(odd),
+      .right-menu .left-menu-btn span:nth-child(odd) {
+        left: 0px;
+        border-radius: 9px 0 0 9px; }
+      .menu .left-menu-btn span:nth-child(1), .menu .left-menu-btn span:nth-child(2),
+      .right-menu .left-menu-btn span:nth-child(1),
+      .right-menu .left-menu-btn span:nth-child(2) {
+        top: 0px; }
+      .menu .left-menu-btn span:nth-child(3), .menu .left-menu-btn span:nth-child(4),
+      .right-menu .left-menu-btn span:nth-child(3),
+      .right-menu .left-menu-btn span:nth-child(4) {
+        top: 7px; }
+      .menu .left-menu-btn span:nth-child(5), .menu .left-menu-btn span:nth-child(6),
+      .right-menu .left-menu-btn span:nth-child(5),
+      .right-menu .left-menu-btn span:nth-child(6) {
+        top: 14px; }
+  .menu .menu-close span:nth-child(1), .menu .menu-close span:nth-child(5),
+  .right-menu .menu-close span:nth-child(1),
+  .right-menu .menu-close span:nth-child(5) {
+    left: 1px; }
+  .menu .menu-close span:nth-child(2), .menu .menu-close span:nth-child(6),
+  .right-menu .menu-close span:nth-child(2),
+  .right-menu .menu-close span:nth-child(6) {
+    left: 8px; }
+  .menu .menu-close span:nth-child(1), .menu .menu-close span:nth-child(6),
+  .right-menu .menu-close span:nth-child(1),
+  .right-menu .menu-close span:nth-child(6) {
+    transform: rotate(45deg); }
+  .menu .menu-close span:nth-child(2), .menu .menu-close span:nth-child(5),
+  .right-menu .menu-close span:nth-child(2),
+  .right-menu .menu-close span:nth-child(5) {
+    transform: rotate(-45deg); }
+  .menu .menu-close span:nth-child(1), .menu .menu-close span:nth-child(2),
+  .right-menu .menu-close span:nth-child(1),
+  .right-menu .menu-close span:nth-child(2) {
+    top: 4px; }
+  .menu .menu-close span:nth-child(5), .menu .menu-close span:nth-child(6),
+  .right-menu .menu-close span:nth-child(5),
+  .right-menu .menu-close span:nth-child(6) {
+    top: 11px; }
+  .menu .menu-close span:nth-child(3),
+  .right-menu .menu-close span:nth-child(3) {
+    left: -50%;
+    opacity: 0; }
+  .menu .menu-close span:nth-child(4),
+  .right-menu .menu-close span:nth-child(4) {
+    left: 100%;
+    opacity: 0; }
+  .menu .menu-content,
+  .right-menu .menu-content {
+    padding: 0 1em;
+    margin-top: 4em; }
+    .menu .menu-content ul,
+    .right-menu .menu-content ul {
+      padding: 0; }
+      .menu .menu-content ul li,
+      .right-menu .menu-content ul li {
+        text-align: right;
+        margin-right: 24px;
+        margin-bottom: 1em; }
+        .menu .menu-content ul li a,
+        .right-menu .menu-content ul li a {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center; }
+          .menu .menu-content ul li a img,
+          .right-menu .menu-content ul li a img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px; }
+          .menu .menu-content ul li a p,
+          .right-menu .menu-content ul li a p {
+            color: white;
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 300; }
+
+.menu-left-show {
+  left: 0; }
+
+.right-menu {
+  left: auto;
+  right: -265px; }
+  .right-menu .right-menu-btn {
+    position: fixed;
+    top: 0.8em;
+    right: 1.2em;
+    display: block;
+    height: 26px;
+    width: 26px;
+    perspective: 600px; }
+    .right-menu .right-menu-btn .cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform-origin: center center;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+      .right-menu .right-menu-btn .cube--face {
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        backface-visibility: hidden; }
+      .right-menu .right-menu-btn .cube--face__top {
+        transform: rotateX(180deg); }
+        .right-menu .right-menu-btn .cube--face__top span {
+          position: absolute;
+          top: 12px;
+          left: 3px;
+          display: block;
+          width: 20px;
+          height: 1px;
+          background: #f3df4a;
+          transform: rotate(45deg); }
+          .right-menu .right-menu-btn .cube--face__top span:first-child {
+            transform: rotate(-45deg); }
+    .right-menu .right-menu-btn .cube__rotate {
+      transform: rotateX(180deg); }
+  .right-menu .menu-content {
+    padding: 0 1em;
+    margin-top: 4em;
+    right: -265px; }
+    .right-menu .menu-content ul li {
+      margin-right: 0; }
+      .right-menu .menu-content ul li a {
+        justify-content: flex-start; }
+        .right-menu .menu-content ul li a img {
+          margin-right: 10px; }
+
+.menu-right-show {
+  right: 0; }
+
+.header {
+  width: calc(100% - 2em);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  justify-content: center; }
+  .header .back-button {
+    left: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute; }
+    .header .back-button img {
+      width: 20px;
+      height: 20px; }
+  .header p {
+    color: #f3df4a; }
+
+.index {
+  width: 100%;
+  height: 100%; }
+
+.splash {
+  width: 100%;
+  background: url(../../images/splash-bg.png) center center no-repeat;
+  background-size: cover; }
+  .splash--logo {
+    padding-top: 10vh;
+    margin: 0 auto 25px auto;
+    width: 100%;
+    max-width: 92px; }
+    @media (max-width: 360px) {
+      .splash--logo {
+        padding-top: 5vh; } }
+  .splash--login-form {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    position: relative; }
+    .splash--login-form a {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 1em 0;
+      color: white;
+      margin-bottom: 10px; }
+  .splash__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0; }
+  .splash--business-signup {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; }
+    .splash--business-signup p {
+      color: white;
+      margin: 0; }
+      .splash--business-signup p a {
+        color: #f3df4a; }
+  .splash--call-to-buy {
+    width: 100%;
+    text-align: center; }
+    .splash--call-to-buy a {
+      display: inline-block;
+      width: 100%;
+      max-width: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 1em 1.5em;
+      color: white;
+      margin-bottom: 10px; }
+
+.signup {
+  width: 100%;
+  height: calc(100vh - 50px); }
+  .signup--form {
+    padding-top: 100px;
+    text-align: center; }
+    .signup--form p {
+      color: white;
+      font-size: 1.5em; }
+    .signup--form__input {
+      position: relative;
+      margin-top: 2em; }
+      .signup--form__input span {
+        font-size: 2em;
+        color: white; }
+      .signup--form__input p {
+        margin: 20px auto;
+        text-align: center;
+        max-width: 160px;
+        font-size: 0.875em; }
+        .signup--form__input p button {
+          color: #f3df4a;
+          background: none;
+          text-decoration: underline;
+          padding: 0; }
+      .signup--form__input label {
+        position: absolute;
+        color: #6f6f6f;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 1.125em; }
+      .signup--form__input input {
+        width: 80%;
+        font-size: 2em;
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.2em 0.5em;
+        color: white; }
+        .signup--form__input input:focus {
+          outline: none; }
+      .signup--form__input .signup-input__tel {
+        width: 40%;
+        padding-left: 0;
+        padding-right: 0; }
+      .signup--form__input .signup-input__varification {
+        width: 40%; }
+  .signup--form-address {
+    padding: 0 2em;
+    margin-top: 30px; }
+  .signup--bottom {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    padding: 0 20px; }
+    .signup--bottom a {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 1em 0;
+      color: white;
+      margin-bottom: 10px; }
+  .signup--form-address__input {
+    width: 100%;
+    margin-bottom: 10px; }
+    .signup--form-address__input p {
+      text-align: right;
+      margin: 5px 10px 0 0; }
+    .signup--form-address__input input,
+    .signup--form-address__input select,
+    .signup--form-address__input textarea {
+      width: 100%;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-border-radius: 30px;
+      border-radius: 30px;
+      -moz-border-radius: 30px;
+      -o-border-radius: 30px;
+      padding: 0 1em; }
+      .signup--form-address__input input:focus, .signup--form-address__input input:active,
+      .signup--form-address__input select:focus,
+      .signup--form-address__input select:active,
+      .signup--form-address__input textarea:focus,
+      .signup--form-address__input textarea:active {
+        outline: none; }
+    .signup--form-address__input select {
+      text-align: center;
+      text-align-last: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: rgba(255, 255, 255, 0.1);
+      background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 30 30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 12px; }
+  .signup .form-address__input__multiple {
+    display: flex;
+    justify-content: space-between; }
+    .signup .form-address__input__multiple input {
+      width: calc(55% - 1em); }
+    .signup .form-address__input__multiple select {
+      width: calc(40% - 1em); }
+  .signup .form-address__input__p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .signup .form-address__input__p input {
+      width: calc(80% - 1em); }
+    .signup .form-address__input__p p {
+      color: white;
+      font-size: 1.5em; }
+  .signup .form-address__input__last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .signup .form-address__input__last input {
+      width: calc(30% - 1em); }
+    .signup .form-address__input__last p {
+      color: white;
+      font-size: 1.5em;
+      margin: 0; }
+  .signup .error-message {
+    color: red;
+    display: none; }
+  .signup .error-message__road {
+    text-align: center; }
+  .signup--form-address__elevator {
+    margin-top: 2em; }
+    .signup--form-address__elevator p {
+      text-align: center;
+      color: white;
+      margin: 0;
+      margin-bottom: 10px; }
+    .signup--form-address__elevator .elevator-wrap {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-border-radius: 30px;
+      border-radius: 30px;
+      -moz-border-radius: 30px;
+      -o-border-radius: 30px; }
+      .signup--form-address__elevator .elevator-wrap .elevator-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin: 0 1em;
+        cursor: pointer;
+        color: white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+        .signup--form-address__elevator .elevator-wrap .elevator-label input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer; }
+          .signup--form-address__elevator .elevator-wrap .elevator-label input:checked ~ .radio-checkmark {
+            background-color: #f3df4a; }
+          .signup--form-address__elevator .elevator-wrap .elevator-label input:checked ~ .radio-checkmark:after,
+          .signup--form-address__elevator .elevator-wrap .elevator-label input:checked ~ .radio-checkmark:before {
+            display: block;
+            background-color: black; }
+        .signup--form-address__elevator .elevator-wrap .elevator-label .radio-checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #131313;
+          border-radius: 50%;
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+          .signup--form-address__elevator .elevator-wrap .elevator-label .radio-checkmark:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 11px;
+            background-color: rgba(255, 255, 255, 0.05);
+            left: 12px;
+            top: 6px; }
+          .signup--form-address__elevator .elevator-wrap .elevator-label .radio-checkmark:after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.05);
+            left: 9px;
+            top: 14px; }
+        .signup--form-address__elevator .elevator-wrap .elevator-label:hover input ~ .radio-checkmark {
+          background-color: #f3df4a; }
+  .signup--form__warning {
+    width: 100%;
+    max-width: 240px;
+    margin: 12px auto; }
+    .signup--form__warning p {
+      color: red;
+      text-align: center; }
+  .signup--form__confirm {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4em; }
+    .signup--form__confirm #confirmAddress {
+      background-color: #f3df4a;
+      color: black;
+      padding: 1em 3.375em;
+      margin: 0 auto;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -o-border-radius: 25px; }
+      .signup--form__confirm #confirmAddress:hover {
+        outline: none; }
+  .signup--policy {
+    padding: 0 1em; }
+    .signup--policy .policy-content {
+      background: rgba(0, 0, 0, 0.29);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 1em 1em;
+      height: 450px;
+      overflow: hidden;
+      overflow-y: scroll;
+      font-size: 0.875em; }
+      .signup--policy .policy-content .break {
+        margin-bottom: 1.5em; }
+      .signup--policy .policy-content ul {
+        padding: 0; }
+        .signup--policy .policy-content ul li {
+          list-style: none;
+          padding-left: 2em; }
+    .signup--policy .policy-validation {
+      padding: 0 1em;
+      margin: 30px 0; }
+      .signup--policy .policy-validation__checkbox {
+        display: block;
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 0.875em;
+        color: white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+        .signup--policy .policy-validation__checkbox input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0; }
+          .signup--policy .policy-validation__checkbox input:checked ~ span {
+            background: black;
+            border-color: black; }
+            .signup--policy .policy-validation__checkbox input:checked ~ span:after {
+              display: block; }
+        .signup--policy .policy-validation__checkbox span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background: none;
+          border: 2px solid white;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          -moz-border-radius: 5px;
+          -o-border-radius: 5px; }
+          .signup--policy .policy-validation__checkbox span:after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 4px;
+            top: 0px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+    .signup--policy .policy-confirm {
+      padding: 0 0.2em; }
+      .signup--policy .policy-confirm a {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        color: white;
+        padding: 1em 0;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -o-border-radius: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+      .signup--policy .policy-confirm .disabled {
+        background: rgba(146, 146, 146, 0.5);
+        color: gray; }
+  .signup--tutorial .tutorial-text,
+  .signup--tutorial .tutorial-img,
+  .signup--tutorial .tutorial-img__wide {
+    padding: 0 4em;
+    text-align: center;
+    margin-top: 40px; }
+    .signup--tutorial .tutorial-text h1,
+    .signup--tutorial .tutorial-img h1,
+    .signup--tutorial .tutorial-img__wide h1 {
+      color: #f3df4a;
+      font-size: 1.5em; }
+    .signup--tutorial .tutorial-text h2,
+    .signup--tutorial .tutorial-img h2,
+    .signup--tutorial .tutorial-img__wide h2 {
+      font-size: 1.125em;
+      color: white; }
+  .signup--tutorial .tutorial-img {
+    margin-top: 20px; }
+    .signup--tutorial .tutorial-img img {
+      width: 100%; }
+  .signup--tutorial .tutorial-next {
+    text-align: center; }
+    .signup--tutorial .tutorial-next button {
+      padding: 0.875em 2.875em;
+      background: #f3df4a;
+      color: black;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -o-border-radius: 25px; }
+  .signup--tutorial .tutorial-img__wide {
+    padding: 0 1em; }
+  .signup--tutorial .tutorial-img__alt {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; }
+    .signup--tutorial .tutorial-img__alt img {
+      height: 75vh;
+      width: auto; }
+  .signup--tutorial .tutorial-img__last {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+    .signup--tutorial .tutorial-img__last img {
+      height: 75vh;
+      width: auto; }
+
+.signup__select-plan {
+  width: 100%;
+  padding-top: 60px; }
+  @media (max-width: 360px) {
+    .signup__select-plan {
+      padding-top: 10px; } }
+  .signup__select-plan .plans {
+    display: block;
+    width: 67%;
+    margin: 0 auto 30px auto;
+    background: rgba(46, 46, 46, 0.6);
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    text-align: center;
+    padding-bottom: 20px; }
+    @media (max-width: 360px) {
+      .signup__select-plan .plans {
+        margin-bottom: 20px; } }
+    .signup__select-plan .plans img {
+      width: 80%;
+      margin: 0 auto; }
+    .signup__select-plan .plans p {
+      color: #f3df4a;
+      font-weight: 900;
+      margin: 0;
+      font-size: 1.5em; }
+  .signup__select-plan .normal-plan {
+    margin-bottom: 0; }
+    .signup__select-plan .normal-plan img {
+      width: 100%;
+      margin-top: -20px; }
+    .signup__select-plan .normal-plan p {
+      margin-top: -35px; }
+
+.plan-notice--gas-image {
+  position: relative;
+  width: 100%;
+  max-width: 235px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px; }
+  .plan-notice--gas-image:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: rgba(46, 46, 46, 0.6);
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    width: 100%;
+    height: 140px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; }
+  .plan-notice--gas-image p {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #f3df4a;
+    margin: 0;
+    margin-top: -20px;
+    z-index: 5; }
+  .plan-notice--gas-image img {
+    position: relative;
+    z-index: 5; }
+
+.plan-notice--gas-image__normal-plan p {
+  margin-top: -40px; }
+
+.plan-notice--gas-image__normal-plan img {
+  margin-top: -40px; }
+
+.plan-notice--description {
+  width: 100%;
+  max-width: 260px;
+  margin: 20px auto; }
+  .plan-notice--description p {
+    color: white;
+    font-size: .813em; }
+
+.plan-notice--img-description {
+  text-align: center; }
+  .plan-notice--img-description img {
+    width: 90%; }
+
+.plan-notice--available-area {
+  margin-top: 40px; }
+  .plan-notice--available-area p {
+    text-align: center;
+    color: white;
+    font-size: .813em;
+    margin: 0; }
+
+.plan-notice--available-area-btn {
+  text-align: center;
+  margin-top: 1em; }
+  .plan-notice--available-area-btn a {
+    display: inline-block;
+    color: #f3df4a;
+    padding: 10px 18px;
+    border: 1px solid #f3df4a;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -o-border-radius: 12px; }
+
+.plan-notice--confirm-plan {
+  margin-top: 40px;
+  padding: .5em; }
+  .plan-notice--confirm-plan a {
+    display: block;
+    background: #f3df4a;
+    color: black;
+    text-align: center;
+    padding: 10px 16px; }
+
+.signup__check-gas .check-gas--gas-img,
+.signup__check-gas .check-gas--gas-img-logo {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px; }
+  @media (max-width: 360px) {
+    .signup__check-gas .check-gas--gas-img,
+    .signup__check-gas .check-gas--gas-img-logo {
+      max-width: 250px; } }
+  .signup__check-gas .check-gas--gas-img:before,
+  .signup__check-gas .check-gas--gas-img-logo:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: rgba(46, 46, 46, 0.6);
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    width: 100%;
+    height: 140px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; }
+  .signup__check-gas .check-gas--gas-img p,
+  .signup__check-gas .check-gas--gas-img-logo p {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #f3df4a;
+    margin: 0;
+    margin-top: -20px;
+    z-index: 5; }
+    @media (max-width: 360px) {
+      .signup__check-gas .check-gas--gas-img p,
+      .signup__check-gas .check-gas--gas-img-logo p {
+        font-size: 1.125em; } }
+  .signup__check-gas .check-gas--gas-img img,
+  .signup__check-gas .check-gas--gas-img-logo img {
+    position: relative;
+    z-index: 5;
+    width: 80%; }
+
+.signup__check-gas .check-gas--gas-img-logo img {
+  margin-bottom: 30px; }
+
+.signup__check-gas .check-gas--radio-input__wrap {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px; }
+  .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label {
+    display: block;
+    position: relative;
+    padding-left: 55px;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    @media (max-width: 360px) {
+      .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label {
+        font-size: 1.125em; } }
+    .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer; }
+      .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label input:checked ~ .radio-checkmark:before {
+        display: block;
+        background-color: #f3df4a; }
+    .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label .radio-checkmark {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 50%; }
+      @media (max-width: 360px) {
+        .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label .radio-checkmark {
+          height: 40px;
+          width: 40px; } }
+      .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label .radio-checkmark:before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        -moz-border-radius: 100%;
+        -o-border-radius: 100%;
+        left: 10px;
+        top: 10px; }
+        @media (max-width: 360px) {
+          .signup__check-gas .check-gas--radio-input__wrap .check-gas--radio-input__label .radio-checkmark:before {
+            height: 20px;
+            width: 20px; } }
+
+.signup__check-gas .check-gas--confirm-btn,
+.signup__check-gas .check-gas--confirm-btn-special {
+  text-align: center;
+  margin-top: 100px; }
+  @media (max-width: 360px) {
+    .signup__check-gas .check-gas--confirm-btn,
+    .signup__check-gas .check-gas--confirm-btn-special {
+      margin-top: 30px; } }
+  .signup__check-gas .check-gas--confirm-btn button,
+  .signup__check-gas .check-gas--confirm-btn-special button {
+    background-color: #f3df4a;
+    color: black;
+    font-size: 1.125em;
+    text-align: center;
+    padding: 10px;
+    min-width: 150px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -o-border-radius: 25px; }
+    .signup__check-gas .check-gas--confirm-btn button:focus,
+    .signup__check-gas .check-gas--confirm-btn-special button:focus {
+      outline: none; }
+
+.signup__check-gas .check-gas--confirm-btn-special {
+  margin-top: 30px; }
+
+.signup__check-gas .check-gas--notice {
+  width: 100%;
+  max-width: 276px;
+  margin: 40px auto; }
+  .signup__check-gas .check-gas--notice p {
+    color: white;
+    font-size: 0.813em; }
+
+.signup__check-gas .check-gas--gas-input,
+.signup__check-gas .check-gas--gas-input-sepcial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em; }
+  .signup__check-gas .check-gas--gas-input span,
+  .signup__check-gas .check-gas--gas-input-sepcial span {
+    color: white;
+    font-size: 2.25em;
+    padding: 0 0.7em; }
+    .signup__check-gas .check-gas--gas-input span:last-child,
+    .signup__check-gas .check-gas--gas-input-sepcial span:last-child {
+      padding-left: 0; }
+  .signup__check-gas .check-gas--gas-input input,
+  .signup__check-gas .check-gas--gas-input-sepcial input {
+    font-size: 2.25em;
+    width: 100%;
+    max-width: 50px;
+    border: none;
+    background: none;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic; }
+
+.signup__check-gas .check-gas--gas-input-special input {
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.signup__check-gas .check-gas--gas-input-special label {
+  width: calc(80% - 4em);
+  margin: 30px auto 0 auto;
+  font-size: 1.25em;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 3em 0 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px; }
+  .signup__check-gas .check-gas--gas-input-special label:after {
+    content: '';
+    display: block;
+    width: 23px;
+    height: 20px;
+    background: url(../images/camera.svg);
+    position: absolute;
+    right: 15px;
+    top: 15px; }
+
+.signup__check-gas--popup {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .signup__check-gas--popup .signup__check-gas--popup-content {
+    background: #252525;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 16px;
+    text-align: center;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -o-border-radius: 12px; }
+    .signup__check-gas--popup .signup__check-gas--popup-content h3 {
+      color: #f3df4a;
+      font-size: 1.5em;
+      font-weight: 900;
+      margin: 0;
+      text-align: left; }
+    .signup__check-gas--popup .signup__check-gas--popup-content p {
+      color: white;
+      margin: 0;
+      font-size: 0.875em;
+      text-align: left; }
+    .signup__check-gas--popup .signup__check-gas--popup-content img {
+      max-width: 80%;
+      margin: 12px auto 20px auto; }
+    .signup__check-gas--popup .signup__check-gas--popup-content button {
+      background-color: #f3df4a;
+      color: black;
+      font-size: 1.125em;
+      text-align: center;
+      padding: 10px;
+      min-width: 150px;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -o-border-radius: 25px; }
+      .signup__check-gas--popup .signup__check-gas--popup-content button:focus {
+        outline: none; }
+
+.buy-gas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 50px); }
+  .buy-gas--can {
+    width: 80%;
+    margin: 0 auto; }
+    .buy-gas--can .buy-gas--can-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .buy-gas--can .buy-gas--can-img img {
+        position: relative;
+        z-index: 5;
+        width: 80%;
+        margin-left: 10px; }
+      .buy-gas--can .buy-gas--can-img:after {
+        content: '';
+        display: block;
+        width: 225px;
+        height: 90px;
+        background: #2e2e2e;
+        position: absolute;
+        bottom: 24px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -o-border-radius: 10px;
+        z-index: 1; }
+      .buy-gas--can .buy-gas--can-img p {
+        position: relative;
+        width: 100%;
+        z-index: 5;
+        text-align: center;
+        font-size: 2em;
+        font-style: italic;
+        margin: 0;
+        margin-top: -20px;
+        font-weight: 900;
+        color: #f3df4a; }
+      .buy-gas--can .buy-gas--can-img .gas-can__bee-decorator {
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        width: 85px;
+        transform: scaleX(-1); }
+    .buy-gas--can .buy-gas--quantity-input {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .buy-gas--can .buy-gas--quantity-input span {
+        color: white;
+        font-size: 2.25em;
+        padding: 0 0.7em; }
+      .buy-gas--can .buy-gas--quantity-input input {
+        font-size: 2em;
+        width: 100%;
+        max-width: 50px;
+        border: none;
+        background: none;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+        font-style: italic; }
+  .buy-gas .buy-gas--price-count {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px; }
+    .buy-gas .buy-gas--price-count .price-count--call button,
+    .buy-gas .buy-gas--price-count .price-count--other button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: #f3df4a;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      -moz-border-radius: 100%;
+      -o-border-radius: 100%; }
+      .buy-gas .buy-gas--price-count .price-count--call button img,
+      .buy-gas .buy-gas--price-count .price-count--other button img {
+        width: 30px; }
+    .buy-gas .buy-gas--price-count .price-count--confirm {
+      text-align: center;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .buy-gas .buy-gas--price-count .price-count--confirm button {
+        background: #f3df4a;
+        text-align: center;
+        padding: 0.5em 1em;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -o-border-radius: 100px; }
+      .buy-gas .buy-gas--price-count .price-count--confirm p {
+        color: white;
+        margin: 20px 0 10px 0;
+        text-align: center;
+        font-size: 1.5em; }
+    .buy-gas .buy-gas--price-count .price-count--confirm__show {
+      height: 106px;
+      opacity: 1;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    .buy-gas .buy-gas--price-count .price-count--other button {
+      margin-top: 1em; }
+
+.buy-gas-exchange {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px); }
+  .buy-gas-exchange--existing-gas, .buy-gas-exchange--exchange-coupon {
+    padding: 0 70px; }
+    @media (max-width: 360px) {
+      .buy-gas-exchange--existing-gas, .buy-gas-exchange--exchange-coupon {
+        padding: 0 2em; } }
+    .buy-gas-exchange--existing-gas .existing-gas,
+    .buy-gas-exchange--existing-gas .exchange-coupon, .buy-gas-exchange--exchange-coupon .existing-gas,
+    .buy-gas-exchange--exchange-coupon .exchange-coupon {
+      margin-top: 20px;
+      width: calc(100% - 32px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 16px 10px 16px;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .buy-gas-exchange--existing-gas .existing-gas img,
+      .buy-gas-exchange--existing-gas .existing-gas p,
+      .buy-gas-exchange--existing-gas .exchange-coupon img,
+      .buy-gas-exchange--existing-gas .exchange-coupon p, .buy-gas-exchange--exchange-coupon .existing-gas img,
+      .buy-gas-exchange--exchange-coupon .existing-gas p,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon img,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon p {
+        position: relative;
+        z-index: 5;
+        color: white;
+        margin: 0;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+      .buy-gas-exchange--existing-gas .existing-gas img,
+      .buy-gas-exchange--existing-gas .exchange-coupon img, .buy-gas-exchange--exchange-coupon .existing-gas img,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon img {
+        width: 75%; }
+      .buy-gas-exchange--existing-gas .existing-gas .existing-gas--img,
+      .buy-gas-exchange--existing-gas .existing-gas .exchange-coupon--img,
+      .buy-gas-exchange--existing-gas .exchange-coupon .existing-gas--img,
+      .buy-gas-exchange--existing-gas .exchange-coupon .exchange-coupon--img, .buy-gas-exchange--exchange-coupon .existing-gas .existing-gas--img,
+      .buy-gas-exchange--exchange-coupon .existing-gas .exchange-coupon--img,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon .existing-gas--img,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon .exchange-coupon--img {
+        bottom: 0;
+        display: flex;
+        justify-content: center; }
+        .buy-gas-exchange--existing-gas .existing-gas .existing-gas--img img,
+        .buy-gas-exchange--existing-gas .existing-gas .exchange-coupon--img img,
+        .buy-gas-exchange--existing-gas .exchange-coupon .existing-gas--img img,
+        .buy-gas-exchange--existing-gas .exchange-coupon .exchange-coupon--img img, .buy-gas-exchange--exchange-coupon .existing-gas .existing-gas--img img,
+        .buy-gas-exchange--exchange-coupon .existing-gas .exchange-coupon--img img,
+        .buy-gas-exchange--exchange-coupon .exchange-coupon .existing-gas--img img,
+        .buy-gas-exchange--exchange-coupon .exchange-coupon .exchange-coupon--img img {
+          margin-bottom: -20px; }
+      .buy-gas-exchange--existing-gas .existing-gas .existing-gas--gas-size,
+      .buy-gas-exchange--existing-gas .existing-gas .exchange-coupon--quantity,
+      .buy-gas-exchange--existing-gas .exchange-coupon .existing-gas--gas-size,
+      .buy-gas-exchange--existing-gas .exchange-coupon .exchange-coupon--quantity, .buy-gas-exchange--exchange-coupon .existing-gas .existing-gas--gas-size,
+      .buy-gas-exchange--exchange-coupon .existing-gas .exchange-coupon--quantity,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon .existing-gas--gas-size,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon .exchange-coupon--quantity {
+        color: #f3df4a;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 1.875em; }
+      .buy-gas-exchange--existing-gas .existing-gas:after,
+      .buy-gas-exchange--existing-gas .exchange-coupon:after, .buy-gas-exchange--exchange-coupon .existing-gas:after,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -3px;
+        width: 100%;
+        height: 125px;
+        background: rgba(79, 79, 79, 0.42);
+        border: 3px solid #393939;
+        backdrop-filter: blur(10px);
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -moz-border-radius: 12px;
+        -o-border-radius: 12px;
+        z-index: 1; }
+    .buy-gas-exchange--existing-gas .existing-gas__cancel p,
+    .buy-gas-exchange--existing-gas .existing-gas__cancel .existing-gas--gas-size,
+    .buy-gas-exchange--existing-gas .existing-gas__cancel .exchange-coupon--quantity, .buy-gas-exchange--exchange-coupon .existing-gas__cancel p,
+    .buy-gas-exchange--exchange-coupon .existing-gas__cancel .existing-gas--gas-size,
+    .buy-gas-exchange--exchange-coupon .existing-gas__cancel .exchange-coupon--quantity {
+      color: #ff3850; }
+    .buy-gas-exchange--existing-gas .existing-gas__cancel:after, .buy-gas-exchange--exchange-coupon .existing-gas__cancel:after {
+      border-color: #ff3850; }
+    .buy-gas-exchange--existing-gas .existing-gas--exchange-btn,
+    .buy-gas-exchange--existing-gas .exchange-coupon--exchange-btn, .buy-gas-exchange--exchange-coupon .existing-gas--exchange-btn,
+    .buy-gas-exchange--exchange-coupon .exchange-coupon--exchange-btn {
+      text-align: center;
+      margin-top: 1em; }
+      .buy-gas-exchange--existing-gas .existing-gas--exchange-btn button,
+      .buy-gas-exchange--existing-gas .exchange-coupon--exchange-btn button, .buy-gas-exchange--exchange-coupon .existing-gas--exchange-btn button,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon--exchange-btn button {
+        background: #f3df4a;
+        padding: 0.5em 2em;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        -moz-border-radius: 25px;
+        -o-border-radius: 25px;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+        .buy-gas-exchange--existing-gas .existing-gas--exchange-btn button:hover, .buy-gas-exchange--existing-gas .existing-gas--exchange-btn button:active, .buy-gas-exchange--existing-gas .existing-gas--exchange-btn button:focus,
+        .buy-gas-exchange--existing-gas .exchange-coupon--exchange-btn button:hover,
+        .buy-gas-exchange--existing-gas .exchange-coupon--exchange-btn button:active,
+        .buy-gas-exchange--existing-gas .exchange-coupon--exchange-btn button:focus, .buy-gas-exchange--exchange-coupon .existing-gas--exchange-btn button:hover, .buy-gas-exchange--exchange-coupon .existing-gas--exchange-btn button:active, .buy-gas-exchange--exchange-coupon .existing-gas--exchange-btn button:focus,
+        .buy-gas-exchange--exchange-coupon .exchange-coupon--exchange-btn button:hover,
+        .buy-gas-exchange--exchange-coupon .exchange-coupon--exchange-btn button:active,
+        .buy-gas-exchange--exchange-coupon .exchange-coupon--exchange-btn button:focus {
+          outline: none; }
+      .buy-gas-exchange--existing-gas .existing-gas--exchange-btn .cancel-existing-gas,
+      .buy-gas-exchange--existing-gas .exchange-coupon--exchange-btn .cancel-existing-gas, .buy-gas-exchange--exchange-coupon .existing-gas--exchange-btn .cancel-existing-gas,
+      .buy-gas-exchange--exchange-coupon .exchange-coupon--exchange-btn .cancel-existing-gas {
+        background: #ff3850; }
+    .buy-gas-exchange--existing-gas .exchange-coupon, .buy-gas-exchange--exchange-coupon .exchange-coupon {
+      padding: 16px 16px 10px 16px; }
+  .buy-gas-exchange--no-exchange {
+    margin: 40px 0;
+    padding: 0 70px; }
+    @media (max-width: 360px) {
+      .buy-gas-exchange--no-exchange {
+        padding: 0 2em; } }
+    .buy-gas-exchange--no-exchange button {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0.875em 2em;
+      background: #ff3850;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -o-border-radius: 25px;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    .buy-gas-exchange--no-exchange .confirm-exchange {
+      background: #f3df4a; }
+
+.buy-gas-coupon {
+  position: relative;
+  width: calc(100% - 20px);
+  height: calc(100vh - 70px);
+  padding: 0 10px; }
+  .buy-gas-coupon .coupon {
+    margin-top: 20px;
+    position: relative;
+    overflow: visible; }
+    .buy-gas-coupon .coupon .coupon-img {
+      margin-bottom: 10px; }
+
+.install-gas {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px); }
+  .install-gas--wrapper {
+    padding: 0 2em; }
+    .install-gas--wrapper .install-gas--gas-top {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      padding: 180px 10px 10px 10px; }
+      .install-gas--wrapper .install-gas--gas-top div {
+        position: relative;
+        z-index: 5; }
+      .install-gas--wrapper .install-gas--gas-top .gas-img {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        z-index: 10; }
+        .install-gas--wrapper .install-gas--gas-top .gas-img img {
+          width: 65%;
+          margin-left: 20%; }
+          @media (max-width: 360px) {
+            .install-gas--wrapper .install-gas--gas-top .gas-img img {
+              width: 60%; } }
+      .install-gas--wrapper .install-gas--gas-top div p {
+        font-size: 1.875em;
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        font-style: italic; }
+      .install-gas--wrapper .install-gas--gas-top div .gas-deposit--title,
+      .install-gas--wrapper .install-gas--gas-top div .gas-price--title {
+        color: black;
+        font-style: normal;
+        display: inline-block;
+        background: white;
+        padding: 0.3em 0.5em;
+        font-size: 0.75em;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -o-border-radius: 10px; }
+      .install-gas--wrapper .install-gas--gas-top div .gas-deposit--price {
+        font-size: 1.25em; }
+      .install-gas--wrapper .install-gas--gas-top .gas-price {
+        text-align: right; }
+      .install-gas--wrapper .install-gas--gas-top:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100px;
+        background: #2e2e2e;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -moz-border-radius: 12px;
+        -o-border-radius: 12px; }
+      .install-gas--wrapper .install-gas--gas-top .gas-installation,
+      .install-gas--wrapper .install-gas--gas-top .gas-rental {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 90px;
+        padding: 5px 0;
+        bottom: 115px;
+        left: 0; }
+        .install-gas--wrapper .install-gas--gas-top .gas-installation img,
+        .install-gas--wrapper .install-gas--gas-top .gas-rental img {
+          width: 75px;
+          z-index: 5; }
+        .install-gas--wrapper .install-gas--gas-top .gas-installation .gas-installation--text,
+        .install-gas--wrapper .install-gas--gas-top .gas-rental .gas-installation--text {
+          padding: 0.1em 1em;
+          text-align: center;
+          font-size: 0.75em;
+          background: white;
+          color: black;
+          max-width: 50px;
+          margin: 0 auto;
+          z-index: 5;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          -moz-border-radius: 10px;
+          -o-border-radius: 10px; }
+        .install-gas--wrapper .install-gas--gas-top .gas-installation .gas-installation--price,
+        .install-gas--wrapper .install-gas--gas-top .gas-rental .gas-installation--price {
+          font-size: 1.25em;
+          z-index: 5; }
+        .install-gas--wrapper .install-gas--gas-top .gas-installation:after,
+        .install-gas--wrapper .install-gas--gas-top .gas-rental:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 80px;
+          background: #2e2e2e;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          -moz-border-radius: 12px;
+          -o-border-radius: 12px; }
+      .install-gas--wrapper .install-gas--gas-top .gas-rental {
+        left: auto;
+        right: 0;
+        padding: 5px 10px;
+        max-width: 70px; }
+        .install-gas--wrapper .install-gas--gas-top .gas-rental .gas-rental--quantity {
+          background: #f3df4a;
+          width: 100%;
+          color: black;
+          font-size: 0.75em;
+          font-style: normal;
+          z-index: 5;
+          -webkit-border-radius: 4px;
+          border-radius: 4px;
+          -moz-border-radius: 4px;
+          -o-border-radius: 4px; }
+        .install-gas--wrapper .install-gas--gas-top .gas-rental .gas-rental--text {
+          font-size: 3em;
+          z-index: 5;
+          line-height: 1;
+          color: #f3df4a; }
+        .install-gas--wrapper .install-gas--gas-top .gas-rental .gas-rental--price {
+          width: 100%;
+          text-align: right;
+          font-size: 0.75em;
+          z-index: 5; }
+    .install-gas--wrapper .install-gas--gas-top__no-deposit {
+      justify-content: flex-end; }
+    .install-gas--wrapper .install-gas--input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; }
+      .install-gas--wrapper .install-gas--input span {
+        color: white;
+        font-size: 2.25em;
+        padding: 0 0.7em; }
+      .install-gas--wrapper .install-gas--input input {
+        font-size: 2em;
+        width: 100%;
+        max-width: 50px;
+        border: none;
+        background: none;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+        font-style: italic; }
+    .install-gas--wrapper .install-gas--detail {
+      margin-top: 20px; }
+      .install-gas--wrapper .install-gas--detail-description__deposit, .install-gas--wrapper .install-gas--detail-description__install {
+        position: relative;
+        padding: 0.5em 0.8em;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        margin-bottom: 4px;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -moz-border-radius: 12px;
+        -o-border-radius: 12px; }
+        .install-gas--wrapper .install-gas--detail-description__deposit:after, .install-gas--wrapper .install-gas--detail-description__install:after {
+          content: '\25BE';
+          display: block;
+          position: absolute;
+          right: 16px;
+          top: 0;
+          font-size: 1.25em;
+          color: white;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+        .install-gas--wrapper .install-gas--detail-description__deposit p, .install-gas--wrapper .install-gas--detail-description__install p {
+          margin: 0;
+          font-size: 0.813em; }
+        .install-gas--wrapper .install-gas--detail-description__deposit .detail-title, .install-gas--wrapper .install-gas--detail-description__install .detail-title {
+          text-align: center;
+          color: red; }
+        .install-gas--wrapper .install-gas--detail-description__deposit .detail-description__deposit,
+        .install-gas--wrapper .install-gas--detail-description__deposit .detail-description__install, .install-gas--wrapper .install-gas--detail-description__install .detail-description__deposit,
+        .install-gas--wrapper .install-gas--detail-description__install .detail-description__install {
+          text-align: justify;
+          color: white;
+          display: none;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+          .install-gas--wrapper .install-gas--detail-description__deposit .detail-description__deposit span,
+          .install-gas--wrapper .install-gas--detail-description__deposit .detail-description__install span, .install-gas--wrapper .install-gas--detail-description__install .detail-description__deposit span,
+          .install-gas--wrapper .install-gas--detail-description__install .detail-description__install span {
+            color: red; }
+      .install-gas--wrapper .install-gas--detail .description__show:after {
+        transform: rotate(180deg);
+        top: 3px; }
+      .install-gas--wrapper .install-gas--detail .install-gas--install-price,
+      .install-gas--wrapper .install-gas--detail .install-gas--gas-price,
+      .install-gas--wrapper .install-gas--detail .install-gas--deposit-price,
+      .install-gas--wrapper .install-gas--detail .install-gas--additional,
+      .install-gas--wrapper .install-gas--detail .install-gas--total-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0.813em 1.5em;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        margin-bottom: 4px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        -moz-border-radius: 30px;
+        -o-border-radius: 30px; }
+        .install-gas--wrapper .install-gas--detail .install-gas--install-price p,
+        .install-gas--wrapper .install-gas--detail .install-gas--gas-price p,
+        .install-gas--wrapper .install-gas--detail .install-gas--deposit-price p,
+        .install-gas--wrapper .install-gas--detail .install-gas--additional p,
+        .install-gas--wrapper .install-gas--detail .install-gas--total-price p {
+          margin: 0;
+          color: #bdbdbd; }
+        .install-gas--wrapper .install-gas--detail .install-gas--install-price .install-price--installation-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--install-price .install-price--gas-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--install-price .install-price--deposit-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--install-price .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--gas-price .install-price--installation-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--gas-price .install-price--gas-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--gas-price .install-price--deposit-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--gas-price .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--deposit-price .install-price--installation-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--deposit-price .install-price--gas-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--deposit-price .install-price--deposit-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--deposit-price .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--additional .install-price--installation-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--additional .install-price--gas-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--additional .install-price--deposit-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--additional .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--total-price .install-price--installation-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--total-price .install-price--gas-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--total-price .install-price--deposit-price,
+        .install-gas--wrapper .install-gas--detail .install-gas--total-price .install-price--total-price-value {
+          color: #f3df4a; }
+        .install-gas--wrapper .install-gas--detail .install-gas--install-price .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--gas-price .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--deposit-price .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--additional .install-price--total-price-value,
+        .install-gas--wrapper .install-gas--detail .install-gas--total-price .install-price--total-price-value {
+          font-size: 1.5em; }
+      .install-gas--wrapper .install-gas--detail .install-gas--additional {
+        padding: 2em 1.5em;
+        flex-wrap: wrap; }
+        .install-gas--wrapper .install-gas--detail .install-gas--additional pre {
+          margin: 0;
+          width: 100%;
+          margin-bottom: 1em;
+          color: gray;
+          font-style: italic; }
+        .install-gas--wrapper .install-gas--detail .install-gas--additional .install-gas--additional-buttons {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          .install-gas--wrapper .install-gas--detail .install-gas--additional .install-gas--additional-buttons button,
+          .install-gas--wrapper .install-gas--detail .install-gas--additional .install-gas--additional-buttons a {
+            width: 115px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            -webkit-border-radius: 40px;
+            border-radius: 40px;
+            -moz-border-radius: 40px;
+            -o-border-radius: 40px;
+            font-size: 0.875em;
+            background: #7b7b7b;
+            backdrop-filter: blur(10px); }
+          .install-gas--wrapper .install-gas--detail .install-gas--additional .install-gas--additional-buttons a {
+            background: #f3df4a;
+            color: black; }
+    .install-gas--wrapper .install-gas--confirm {
+      margin-top: 20px;
+      margin-bottom: 2em; }
+      .install-gas--wrapper .install-gas--confirm a {
+        display: block;
+        background: #f3df4a;
+        color: black;
+        padding: 0.875em 1em;
+        font-size: 1.25em;
+        text-align: center;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -moz-border-radius: 12px;
+        -o-border-radius: 12px; }
+
+.no-deposit {
+  display: none !important; }
+
+.comments-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .comments-overlay .comments {
+    width: 260px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    overflow: hidden; }
+    .comments-overlay .comments--cancel {
+      background: #ff3850;
+      text-align: center; }
+      .comments-overlay .comments--cancel button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.25em;
+        background: none;
+        color: white;
+        border: none; }
+    .comments-overlay .comments--textarea textarea {
+      display: block;
+      width: calc(100% - 12px);
+      padding: 6px;
+      border: none;
+      margin: 0;
+      height: 100%; }
+      .comments-overlay .comments--textarea textarea:focus {
+        outline: none; }
+    .comments-overlay .comments--confirm {
+      background: #f3df4a; }
+      .comments-overlay .comments--confirm button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.25em;
+        background: none;
+        color: black;
+        border: none; }
+
+.buy-gas--contract {
+  position: relative;
+  width: calc(100% - 40px);
+  height: calc(100vh - 80px);
+  padding: 0 20px; }
+  .buy-gas--contract .contract {
+    margin-top: 2em;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -o-border-radius: 25px;
+    background: rgba(0, 0, 0, 0.29);
+    border: 3px solid #323232;
+    backdrop-filter: blur(4px);
+    padding: 1em;
+    max-height: 60vh;
+    overflow: hidden;
+    overflow-y: auto; }
+    .buy-gas--contract .contract p {
+      color: white;
+      margin: 0;
+      font-size: 0.875em;
+      line-height: 1.5; }
+    .buy-gas--contract .contract .break {
+      margin-bottom: 10px; }
+    .buy-gas--contract .contract .indent {
+      margin-left: 2em; }
+    .buy-gas--contract .contract ul {
+      color: white;
+      font-size: 0.875em;
+      padding: 0; }
+      .buy-gas--contract .contract ul li {
+        color: white;
+        list-style: none;
+        padding-left: 2em;
+        line-height: 1.5; }
+  .buy-gas--contract .contract__input {
+    padding: 0 1em;
+    margin: 30px auto;
+    max-width: 180px; }
+    .buy-gas--contract .contract__input__checkbox {
+      display: block;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 0.875em;
+      color: white;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .buy-gas--contract .contract__input__checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0; }
+        .buy-gas--contract .contract__input__checkbox input:checked ~ span {
+          background: black;
+          border-color: black; }
+          .buy-gas--contract .contract__input__checkbox input:checked ~ span:after {
+            display: block; }
+      .buy-gas--contract .contract__input__checkbox span {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background: none;
+        border: 2px solid white;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px; }
+        .buy-gas--contract .contract__input__checkbox span:after {
+          content: '';
+          position: absolute;
+          display: none;
+          left: 4px;
+          top: 0px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+  .buy-gas--contract .contract__btn a {
+    display: block;
+    text-align: center;
+    padding: 1em 2em;
+    background: #f3df4a;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -o-border-radius: 12px;
+    color: black;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .buy-gas--contract .contract__btn .disabled {
+    background: rgba(146, 146, 146, 0.5);
+    color: gray; }
+
+.buy-gas--time {
+  position: relative;
+  width: calc(100% - 40px);
+  height: calc(100vh - 80px);
+  padding: 0 20px; }
+  .buy-gas--time-notice {
+    text-align: center;
+    margin-top: 20px; }
+    .buy-gas--time-notice p {
+      color: #f3df4a;
+      margin: 0;
+      font-size: 0.813em; }
+  .buy-gas--time-period {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 20px 0; }
+    .buy-gas--time-period label {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      background: #c4c4c4;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      -moz-border-radius: 12px;
+      -o-border-radius: 12px; }
+      .buy-gas--time-period label > input {
+        visibility: hidden;
+        position: absolute; }
+        .buy-gas--time-period label > input + div {
+          cursor: pointer;
+          padding: 0.5em 0.5em;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          -moz-border-radius: 12px;
+          -o-border-radius: 12px;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+          .buy-gas--time-period label > input + div p {
+            text-align: center;
+            margin: 0;
+            font-weight: bold; }
+      .buy-gas--time-period label > input:checked + div {
+        background: #f3df4a; }
+  .buy-gas--time .buy-gas--delivery-date {
+    margin-top: 40px; }
+    .buy-gas--time .buy-gas--delivery-date input {
+      width: calc(100% - 86px);
+      background: rgba(0, 0, 0, 0.42);
+      border: 3px solid #323232;
+      backdrop-filter: blur(10px);
+      padding: 0.5em 2em;
+      text-align: center;
+      color: #f3df4a;
+      font-size: 1.25em;
+      font-weight: bold;
+      font-style: italic;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      -moz-border-radius: 12px;
+      -o-border-radius: 12px; }
+  .buy-gas--time .buy-gas--delivery-methods {
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.42);
+    border: 3px solid #323232;
+    backdrop-filter: blur(10px);
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -o-border-radius: 12px; }
+    .buy-gas--time .buy-gas--delivery-methods p {
+      color: white;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 6px; }
+    .buy-gas--time .buy-gas--delivery-methods label {
+      display: block;
+      width: 100%;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      -moz-border-radius: 12px;
+      -o-border-radius: 12px; }
+      .buy-gas--time .buy-gas--delivery-methods label > input {
+        visibility: hidden;
+        position: absolute; }
+        .buy-gas--time .buy-gas--delivery-methods label > input + div {
+          position: relative;
+          cursor: pointer;
+          padding: 0.5em 0.5em;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          -moz-border-radius: 12px;
+          -o-border-radius: 12px;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+          .buy-gas--time .buy-gas--delivery-methods label > input + div p {
+            text-align: center;
+            margin: 0;
+            color: #323232;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+          .buy-gas--time .buy-gas--delivery-methods label > input + div:after {
+            content: '';
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            width: 12px;
+            height: 6px;
+            border: 2px solid #f3df4a;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg); }
+      .buy-gas--time .buy-gas--delivery-methods label > input:checked + div p {
+        color: #f3df4a; }
+      .buy-gas--time .buy-gas--delivery-methods label > input:checked + div:after {
+        display: block; }
+  .buy-gas--time .buy-gas--confirm-delivery-time {
+    margin-top: 2em;
+    margin-bottom: 50px; }
+    .buy-gas--time .buy-gas--confirm-delivery-time a {
+      display: block;
+      padding: 1em 2em;
+      background: #f3df4a;
+      text-align: center;
+      color: black;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      -moz-border-radius: 12px;
+      -o-border-radius: 12px;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    .buy-gas--time .buy-gas--confirm-delivery-time .disabled {
+      background: #323232;
+      color: #5a5a5a; }
+
+.datepicker-picker {
+  background-color: rgba(0, 0, 0, 0) !important;
+  width: 100%; }
+
+.datepicker-controls {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; }
+
+.datepicker-controls .next-btn,
+.datepicker-controls .prev-btn {
+  font-size: 0.5em !important; }
+
+.datepicker-controls .button {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: white !important; }
+  .datepicker-controls .button:focus, .datepicker-controls .button:active {
+    outline: none;
+    box-shadow: none !important; }
+
+.datepicker-controls .prev-btn {
+  transform: rotate(180deg); }
+
+.datepicker-view .days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.days-of-week {
+  width: 100%; }
+
+.datepicker-cell,
+.datepicker-view .week {
+  height: 2.5em !important;
+  line-height: 2.5em !important; }
+
+.datepicker-grid {
+  width: 100% !important; }
+
+.datepicker-view .dow {
+  color: white; }
+
+.datepicker-grid span {
+  background: #383838;
+  border-radius: 100% !important; }
+
+.datepicker-view .days .datepicker-cell,
+.datepicker-view .dow {
+  flex-basis: 11.285714% !important;
+  margin: 4px; }
+
+.datepicker-cell,
+.datepicker-view .week {
+  height: 2em; }
+
+.datepicker-grid span {
+  font-style: italic; }
+
+.datepicker-cell.focused:not(.selected) {
+  background-color: yellow;
+  color: black; }
+
+.view-switch {
+  font-style: italic; }
+
+.datepicker-cell.today:not(.selected) {
+  background-color: #c4c4c4 !important;
+  color: black !important; }
+
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: #f3df4a !important;
+  color: black !important; }

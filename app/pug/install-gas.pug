@@ -1,0 +1,67 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_install-gas.js' type="module")
+
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 無償回收借新桶與安裝包
+block main-content
+	.install-gas.default-bg
+		.install-gas--wrapper
+			.install-gas--gas-top
+				.gas-deposit
+					p.gas-deposit--title 每桶押金
+					p.gas-deposit--price
+				.gas-img
+					img(src="images/install-gas.png")
+				.gas-price
+					p.gas-price--title 瓦斯價格
+					p.gas-price--price
+				.gas-installation
+					img(src="images/gas-installation-icon.svg")
+					p.gas-installation--text 安裝包
+					p.gas-installation--price
+				.gas-rental
+					p.gas-rental--quantity 借桶數
+					p.gas-rental--text 1
+					p.gas-rental--price 桶
+			.install-gas--input
+				span#installDecBtn -
+				input(type="text" value="1" disabled)#installValue
+				span#installIncBtn +
+			.install-gas--detail
+				.install-gas--detail-description__deposit
+					p.detail-title 押金桶說明
+					p.detail-description__deposit 本方案使用國際安全認證新世代複合材料氣瓶，具備安全、輕量、美觀等優點，與一般鋼瓶不同，需依政府規定支付#[span]瓶押金，如不需使用瓦斯通時，此氣瓶押金可申請退還。
+				.install-gas--detail-description__install
+					p.detail-title 安裝包說明
+					p.detail-description__install 本方案使用之新世代複合材料氣瓶，不同傳統鋼瓶，採用義大利品牌特殊瓦斯安全閥，#[span 初次新用戶訂購需包含首次安裝包，並獨享優惠價]。第二次購買安裝包則需至商城購買
+				.install-gas--deposit-price
+					p 押桶 x #[span.install-price--deposit-quantity 1]
+					p.install-price--deposit-price
+				.install-gas--install-price
+					p 安裝包 x #[span.install-price--installation-quantity 1]
+					p.install-price--installation-price
+				.install-gas--gas-price
+					p 瓦斯價格 x #[span.install-price--gas-quantity 1]
+					p.install-price--gas-price
+				.install-gas--additional
+					pre.install-gas--comments
+					.install-gas--additional-buttons
+						button.install-gas--comments-btn 備註
+						a(href="#").install-gas--shop 加購瓦斯商品
+				.install-gas--total-price
+					p 確認金額
+					p.install-price--total-price-value
+			.install-gas--confirm
+				a(href="#") 下一步 確認時段
+	.comments-overlay
+		.comments
+			.comments--cancel
+				button X 取消
+			.comments--textarea
+				textarea(rows="4" cols="50")
+			.comments--confirm
+				button 確認

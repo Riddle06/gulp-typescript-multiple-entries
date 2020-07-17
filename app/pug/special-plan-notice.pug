@@ -1,0 +1,24 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_select-plan.js' type="module")
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 免等方案說明
+block main-content
+	.plan-notice.default-bg
+		.plan-notice--gas-image
+			img(src="images/special-plan.png")
+			p 複合材料氣瓶
+		.plan-notice--description
+			p 本方案使用國際安全認證的新世代複合材料氣瓶，比起傳統鋼瓶具更佳的防漏、防爆功能且有輕薄、美觀、安全等優點，當使用者不在家中、睡覺前，可輕鬆提前移動瓦斯氣瓶至家門外，物流人員將進行更換。瓦斯桶可通過手電通照射並觀看剩餘的氣量。
+		.plan-notice--img-description
+			img(src="images/special-plan-img-description.svg")
+		.plan-notice--available-area
+			p 開放區域：新店、泰山
+			p (部分路段與山區尚未開放)
+		.plan-notice--available-area-btn
+			a(href="#") 了解開放區域
+		.plan-notice--confirm-plan
+			a(href="signup-varification.html") 確認使用「免等方案」

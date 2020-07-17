@@ -1,0 +1,346 @@
+.install-gas {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px);
+  &--wrapper {
+    padding: 0 2em;
+    .install-gas--gas-top {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      padding: 180px 10px 10px 10px;
+      div {
+        position: relative;
+        z-index: 5;
+      }
+      .gas-img {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        z-index: 10;
+        img {
+          width: 65%;
+          margin-left: 20%;
+          @include for-small-phone-only {
+            width: 60%;
+          }
+        }
+      }
+      div {
+        p {
+          font-size: 1.875em;
+          margin: 0;
+          text-align: center;
+          color: white;
+          font-weight: 900;
+          font-style: italic;
+        }
+        .gas-deposit--title,
+        .gas-price--title {
+          color: black;
+          font-style: normal;
+          display: inline-block;
+          background: white;
+          padding: 0.3em 0.5em;
+          font-size: 0.75em;
+          @include radius(10px);
+        }
+        .gas-deposit--price {
+          font-size: 1.25em;
+        }
+      }
+      .gas-price {
+        text-align: right;
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100px;
+        background: #2e2e2e;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        @include radius(12px);
+      }
+      .gas-installation,
+      .gas-rental {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 90px;
+        padding: 5px 0;
+        bottom: 115px;
+        left: 0;
+        img {
+          width: 75px;
+          z-index: 5;
+        }
+        .gas-installation--text {
+          padding: 0.1em 1em;
+          text-align: center;
+          font-size: 0.75em;
+          background: white;
+          color: black;
+          max-width: 50px;
+          margin: 0 auto;
+          z-index: 5;
+          @include radius(10px);
+        }
+        .gas-installation--price {
+          font-size: 1.25em;
+          z-index: 5;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 80px;
+          background: #2e2e2e;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          @include radius(12px);
+        }
+      }
+      .gas-rental {
+        left: auto;
+        right: 0;
+        padding: 5px 10px;
+        max-width: 70px;
+        .gas-rental--quantity {
+          background: $yellow;
+          width: 100%;
+          color: black;
+          font-size: 0.75em;
+          font-style: normal;
+          z-index: 5;
+          @include radius(4px);
+        }
+        .gas-rental--text {
+          font-size: 3em;
+          z-index: 5;
+          line-height: 1;
+          color: $yellow;
+        }
+        .gas-rental--price {
+          width: 100%;
+          text-align: right;
+          font-size: 0.75em;
+          z-index: 5;
+        }
+      }
+    }
+    .install-gas--gas-top__no-deposit {
+      justify-content: flex-end;
+    }
+    .install-gas--input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      span {
+        color: white;
+        font-size: 2.25em;
+        padding: 0 0.7em;
+      }
+      input {
+        font-size: 2em;
+        width: 100%;
+        max-width: 50px;
+        border: none;
+        background: none;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+    .install-gas--detail {
+      margin-top: 20px;
+      &-description__deposit,
+      &-description__install {
+        position: relative;
+        padding: 0.5em 0.8em;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        margin-bottom: 4px;
+        @include transition(all 0.3s);
+        @include radius(12px);
+        &:after {
+          content: '\25BE';
+          display: block;
+          position: absolute;
+          right: 16px;
+          top: 0;
+          font-size: 1.25em;
+          color: white;
+          @include transition(all 0.3s);
+        }
+        p {
+          margin: 0;
+          font-size: 0.813em;
+        }
+        .detail-title {
+          text-align: center;
+          color: red;
+        }
+        .detail-description__deposit,
+        .detail-description__install {
+          text-align: justify;
+          color: white;
+          display: none;
+          @include transition(all 0.3s);
+          span {
+            color: red;
+          }
+        }
+      }
+      .description__show {
+        &:after {
+          transform: rotate(180deg);
+          top: 3px;
+        }
+      }
+      .install-gas--install-price,
+      .install-gas--gas-price,
+      .install-gas--deposit-price,
+      .install-gas--additional,
+      .install-gas--total-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0.813em 1.5em;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        margin-bottom: 4px;
+        @include radius(30px);
+        p {
+          margin: 0;
+          color: #bdbdbd;
+        }
+        .install-price--installation-price,
+        .install-price--gas-price,
+        .install-price--deposit-price,
+        .install-price--total-price-value {
+          color: $yellow;
+        }
+        .install-price--total-price-value {
+          font-size: 1.5em;
+        }
+      }
+      .install-gas--additional {
+        padding: 2em 1.5em;
+        flex-wrap: wrap;
+        pre {
+          margin: 0;
+          width: 100%;
+          margin-bottom: 1em;
+          color: gray;
+          font-style: italic;
+        }
+        .install-gas--additional-buttons {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          button,
+          a {
+            width: 115px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            @include radius(40px);
+            font-size: 0.875em;
+            background: #7b7b7b;
+            backdrop-filter: blur(10px);
+          }
+          a {
+            background: $yellow;
+            color: black;
+          }
+        }
+      }
+    }
+    .install-gas--confirm {
+      margin-top: 20px;
+      margin-bottom: 2em;
+      a {
+        display: block;
+        background: $yellow;
+        color: black;
+        padding: 0.875em 1em;
+        font-size: 1.25em;
+        text-align: center;
+        @include radius(12px);
+      }
+    }
+  }
+}
+.no-deposit {
+  display: none !important;
+}
+
+.comments-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  .comments {
+    width: 260px;
+    @include radius(30px);
+    overflow: hidden;
+    &--cancel {
+      background: #ff3850;
+      text-align: center;
+      button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.25em;
+        background: none;
+        color: white;
+        border: none;
+      }
+    }
+    &--textarea {
+      textarea {
+        display: block;
+        width: calc(100% - 12px);
+        padding: 6px;
+        border: none;
+        margin: 0;
+        height: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    &--confirm {
+      background: $yellow;
+      button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.25em;
+        background: none;
+        color: black;
+        border: none;
+      }
+    }
+  }
+}

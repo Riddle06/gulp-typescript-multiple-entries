@@ -1,0 +1,14 @@
+.buy-gas-coupon {
+  position: relative;
+  width: calc(100% - 20px);
+  height: calc(100vh - 70px);
+  padding: 0 10px;
+  .coupon {
+    margin-top: 20px;
+    position: relative;
+    overflow: visible;
+    .coupon-img {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.datepicker-picker {
+  background-color: rgba(0, 0, 0, 0) !important;
+  width: 100%;
+}
+.datepicker-controls {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.datepicker-controls .next-btn,
+.datepicker-controls .prev-btn {
+  font-size: 0.5em !important;
+}
+.datepicker-controls .button {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: white !important;
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none !important;
+  }
+}
+.datepicker-controls .prev-btn {
+  transform: rotate(180deg);
+}
+.datepicker-view .days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.days-of-week {
+  width: 100%;
+}
+.datepicker-cell,
+.datepicker-view .week {
+  height: 2.5em !important;
+  line-height: 2.5em !important;
+}
+.datepicker-grid {
+  width: 100% !important;
+}
+.datepicker-view .dow {
+  color: white;
+}
+
+.datepicker-grid span {
+  background: #383838;
+  border-radius: 100% !important;
+}
+
+.datepicker-view .days .datepicker-cell,
+.datepicker-view .dow {
+  flex-basis: 11.285714% !important;
+  margin: 4px;
+}
+
+.datepicker-cell,
+.datepicker-view .week {
+  height: 2em;
+}
+
+.datepicker-grid span {
+  font-style: italic;
+}
+
+.datepicker-cell.focused:not(.selected) {
+  background-color: yellow;
+  color: black;
+}
+
+.view-switch {
+  font-style: italic;
+}
+.datepicker-cell.today:not(.selected) {
+  background-color: #c4c4c4 !important;
+  color: black !important;
+}
+
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: $yellow !important;
+  color: black !important;
+}

@@ -1,0 +1,34 @@
+extend base/index-layout.pug
+
+block styles
+	link(rel='stylesheet', href='css/glide.core.min.css')
+block script
+	script(src='js/layout_buy-gas.js' type="module")
+	script(src='js/glide.js')
+	script.
+		document.addEventListener('DOMContentLoaded', () => {
+			new Glide('.glide', {
+				type: 'carousel',
+				autoplay: 2000,
+				peek: {
+					before: 20,
+					after: 20
+				}
+			}).mount()
+		})
+block backButton
+	include component/menu.pug
+	p 請選擇瓦斯桶數
+	include component/rightMenu.pug
+block main-content
+	.buy-gas.default-bg
+		.buy-gas--can
+			.buy-gas--can-img
+				img(src="images/buy-gas-special-can.png")
+				p.special-can--price 
+				img.gas-can__bee-decorator(src="images/gas-can-bee.gif")
+			.buy-gas--quantity-input
+				span#buyGasInputDecBtn -
+				input(type="text" value="0" disabled)#buyGasInputValue
+				span#buyGasInputIncBtn +
+		include component/buy-gas/buy-gas-price.pug

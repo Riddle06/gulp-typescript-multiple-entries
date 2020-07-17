@@ -1,0 +1,27 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_signup-existing-gas-input.js' type="module")
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 輸入自由桶數量
+block main-content
+	.signup__check-gas.default-bg
+		.check-gas--gas-img-logo
+			img(src="images/gas-can-logo.png")
+			p 自備瓦斯桶
+		.check-gas--gas-input
+			span#gasInputDecBtn -
+			input(type="text" value="0" disabled)#gasInputValue
+			span#gasInputIncBtn +
+			span 桶
+		.check-gas--confirm-btn
+			button#signupGasInput 確認
+	.signup__check-gas--popup.popup-overlay-wrap
+		.signup__check-gas--popup-content
+			h3 提供自有桶請符合下列兩點:
+			p 1、出廠耐壓試驗日期須大於民國 89 年。
+			p 2、下次檢驗期限於大於1個月,若小於1個月則需額外支付300元檢驗費。
+			img(src="images/check-gas-img.png", alt="")
+			button#signupCheckGasPopup 了解

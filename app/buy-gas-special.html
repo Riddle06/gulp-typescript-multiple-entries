@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gastom</title>
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <script src="js/layout_buy-gas.js" type="module"></script>
+    <script src="js/glide.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      	new Glide('.glide', {
+      		type: 'carousel',
+      		autoplay: 2000,
+      		peek: {
+      			before: 20,
+      			after: 20
+      		}
+      	}).mount()
+      })
+    </script>
+  </head>
+  <body class="default-bg">
+    <div class="header">
+      <div class="menu"><a class="left-menu-btn"><span></span><span></span><span></span><span></span><span></span><span></span></a>
+        <div class="menu-content">
+          <ul>
+            <li><a>
+                <p>最新消息</p><img src="images/menu-news.svg"></a></li>
+            <li><a>
+                <p>個人帳戶</p><img src="images/menu-profile.svg"></a></li>
+            <li><a>
+                <p>我的信用卡</p><img src="images/menu-credit-card.svg"></a></li>
+            <li><a>
+                <p>品牌商城</p><img src="images/menu-brand-store.svg"></a></li>
+            <li><a>
+                <p>瓦斯商城</p><img src="images/menu-store.svg"></a></li>
+            <li><a>
+                <p>退桶申請</p><img src="images/menu-return-gas.svg"></a></li>
+            <li><a>
+                <p>加購押桶</p><img src="images/menu-buy-gas.svg"></a></li>
+            <li><a>
+                <p>轉換免等方案</p><img src="images/menu-switch-plan.svg"></a></li>
+            <li><a>
+                <p>電子發票歸戶</p><img src="images/menu-about.svg"></a></li>
+            <li><a>
+                <p>目前服務區域</p><img src="images/menu-service-area.svg"></a></li>
+            <li><a>
+                <p>關於瓦斯通</p><img src="images/menu-about.svg"></a></li>
+            <li><a>
+                <p>登出</p><img src="images/menu-logout.svg"></a></li>
+          </ul>
+        </div>
+      </div>
+      <p>請選擇瓦斯桶數</p>
+      <div class="right-menu"><a class="right-menu-btn">
+          <div class="cube">
+            <div class="cube--face cube--face__front"><img src="images/right-menu-icon.svg"></div>
+            <div class="cube--face cube--face__top"><span></span><span></span></div>
+          </div></a>
+        <div class="menu-content">
+          <ul>
+            <li><a><img src="images/right-menu-orders.svg">
+                <p>瓦斯產品訂單</p></a></li>
+            <li><a><img src="images/right-menu-orders.svg">
+                <p>品牌商城訂單</p></a></li>
+            <li><a><img src="images/right-menu-shopping-cart.svg">
+                <p>我的購物車</p></a></li>
+            <li><a><img src="images/right-menu-phone.svg">
+                <p>電話叫瓦斯</p></a></li>
+            <li><a><img src="images/right-menu-discounts.svg">
+                <p>我的優惠及存氣</p></a></li>
+            <li><a><img src="images/right-menu-customer-service.svg">
+                <p>客服中心</p></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="buy-gas default-bg">
+      <div class="buy-gas--can">
+        <div class="buy-gas--can-img"><img src="images/buy-gas-special-can.png">
+          <p class="special-can--price"> </p><img class="gas-can__bee-decorator" src="images/gas-can-bee.gif">
+        </div>
+        <div class="buy-gas--quantity-input"><span id="buyGasInputDecBtn">-</span>
+          <input type="text" value="0" disabled id="buyGasInputValue"><span id="buyGasInputIncBtn">+</span>
+        </div>
+      </div>
+      <div class="buy-gas--price-count">
+        <div class="price-count--call">
+          <button><img src="images/buy-gas-telephone.svg"></button>
+        </div>
+        <div class="price-count--confirm">
+          <button>立即付款</button>
+          <p>金額：<span class="price-count--confirm__total"></span></p>
+        </div>
+        <div class="price-count--other">
+          <button><img src="images/buy-gas-shop.svg"></button>
+          <button><img src="images/buy-gas-deposit.svg"></button>
+        </div>
+        <div class="buy-gas--ads glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slides"><img src="images/buy-gas-promo.png"></li>
+              <li class="glide__slides"><img src="images/buy-gas-promo2.png"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

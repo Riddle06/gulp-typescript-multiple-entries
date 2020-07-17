@@ -1,0 +1,19 @@
+extend base/splash-layout.pug
+
+block script
+
+    
+block main-content
+	.index.splash
+		.splash--logo
+			img(src="images/splash-logo.png", alt="")
+		.splash--login-form
+			a(href="#")#login 會員登入
+			a(href="signup-email.html")#signup 會員註冊
+			a(href="#")#guest 訪客進入
+		.splash__bottom
+			.splash--business-signup
+				p 此為住家用用使用
+				p 諾為商業用戶#[a(href="#") 請洽客服]
+			.splash--call-to-buy
+				a(href="#")#callToBuy 直接撥打電話叫瓦斯

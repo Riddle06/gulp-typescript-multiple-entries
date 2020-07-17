@@ -1,0 +1,129 @@
+.buy-gas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 50px);
+  &--can {
+    width: 80%;
+    margin: 0 auto;
+    .buy-gas--can-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      img {
+        position: relative;
+        z-index: 5;
+        width: 80%;
+        margin-left: 10px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 225px;
+        height: 90px;
+        background: #2e2e2e;
+        position: absolute;
+        bottom: 24px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+        @include radius(10px);
+        z-index: 1;
+      }
+      p {
+        position: relative;
+        width: 100%;
+        z-index: 5;
+        text-align: center;
+        font-size: 2em;
+        font-style: italic;
+        margin: 0;
+        margin-top: -20px;
+        font-weight: 900;
+        color: $yellow;
+      }
+      .gas-can__bee-decorator {
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        width: 85px;
+        transform: scaleX(-1);
+      }
+    }
+    .buy-gas--quantity-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        color: white;
+        font-size: 2.25em;
+        padding: 0 0.7em;
+      }
+      input {
+        font-size: 2em;
+        width: 100%;
+        max-width: 50px;
+        border: none;
+        background: none;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+  }
+  .buy-gas--price-count {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+    .price-count--call,
+    .price-count--other {
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background: $yellow;
+        @include radius(100%);
+        img {
+          width: 30px;
+        }
+      }
+    }
+    .price-count--confirm {
+      text-align: center;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      @include transition(all 0.3s);
+      button {
+        background: $yellow;
+        text-align: center;
+        padding: 0.5em 1em;
+        @include radius(100px);
+      }
+      p {
+        color: white;
+        margin: 20px 0 10px 0;
+        text-align: center;
+        font-size: 1.5em;
+      }
+    }
+    .price-count--confirm__show {
+      height: 106px;
+      opacity: 1;
+      @include transition(all 0.3s);
+    }
+    .price-count--other {
+      button {
+        margin-top: 1em;
+      }
+    }
+  }
+}

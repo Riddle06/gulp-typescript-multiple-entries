@@ -1,0 +1,24 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_select-plan.js' type="module")
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 一般方案說明
+block main-content
+	.plan-notice.default-bg
+		.plan-notice--gas-image.plan-notice--gas-image__normal-plan
+			img(src="images/normal-plan.png")
+			p 一般瓦斯鋼瓶
+		.plan-notice--description
+			p 一般方案使用傳統鋼瓶作為桶裝瓦斯，可多樣選擇瓦斯公斤數規格，使用者可依需求購買。並可選擇立即配送90分鐘內送達，或選擇預約時段範圍，時段到來時，在家等待配送員抵達更換瓦斯。
+		.plan-notice--img-description
+			img(src="images/normal-plan-img-description.svg")
+		.plan-notice--available-area
+			p 開放區域：台北、新北、基隆
+			p (部分路段與山區尚未開放)
+		.plan-notice--available-area-btn
+			a(href="#") 了解開放區域
+		.plan-notice--confirm-plan
+			a(href="signup-varification.html") 確認使用「一般方案」

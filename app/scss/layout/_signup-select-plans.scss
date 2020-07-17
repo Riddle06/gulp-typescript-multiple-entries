@@ -1,0 +1,39 @@
+.signup__select-plan {
+	width: 100%;
+	padding-top: 60px;
+	@include for-small-phone-only {
+		padding-top: 10px;
+	}
+	.plans {
+		display: block;
+		width: 67%;
+		margin: 0 auto 30px auto;
+		background: rgba(46, 46, 46, .6);
+		@include radius(30px);
+		text-align: center;
+		padding-bottom: 20px;
+		@include for-small-phone-only {
+			margin-bottom: 20px;
+		}
+		img {
+			width: 80%;
+			margin: 0 auto;
+		}
+		p {
+			color: $yellow;
+			font-weight: 900;
+			margin: 0;
+			font-size: 1.5em;
+		}
+	}
+	.normal-plan {
+		margin-bottom: 0;
+		img {
+			width: 100%;
+			margin-top: -20px;
+		}
+		p {
+			margin-top: -35px;
+		}
+	}
+}

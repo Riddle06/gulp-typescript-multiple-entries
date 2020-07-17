@@ -1,0 +1,409 @@
+.signup {
+  width: 100%;
+  height: calc(100vh - 50px);
+  &--form {
+    padding-top: 100px;
+    text-align: center;
+    p {
+      color: white;
+      font-size: 1.5em;
+    }
+    &__input {
+      position: relative;
+      margin-top: 2em;
+      span {
+        font-size: 2em;
+        color: white;
+      }
+      p {
+        margin: 20px auto;
+        text-align: center;
+        max-width: 160px;
+        font-size: 0.875em;
+        button {
+          color: $yellow;
+          background: none;
+          text-decoration: underline;
+          padding: 0;
+        }
+      }
+      label {
+        position: absolute;
+        color: $inputBackgroundGray;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 1.125em;
+      }
+      input {
+        width: 80%;
+        font-size: 2em;
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.2em 0.5em;
+        color: white;
+        &:focus {
+          outline: none;
+        }
+      }
+      .signup-input__tel {
+        width: 40%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .signup-input__varification {
+        width: 40%;
+      }
+    }
+  }
+  &--form-address {
+    padding: 0 2em;
+    margin-top: 30px;
+  }
+  &--bottom {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    a {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: $border-radius;
+      padding: 1em 0;
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+  &--form-address__input {
+    width: 100%;
+    margin-bottom: 10px;
+    p {
+      text-align: right;
+      margin: 5px 10px 0 0;
+    }
+    input,
+    select,
+    textarea {
+      width: 100%;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      @include radius(30px);
+      padding: 0 1em;
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+    select {
+      text-align: center;
+      text-align-last: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: rgba(255, 255, 255, 0.1);
+      background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 30 30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 12px;
+    }
+  }
+  .form-address__input__multiple {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: calc(55% - 1em);
+    }
+    select {
+      width: calc(40% - 1em);
+    }
+  }
+  .form-address__input__p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      width: calc(80% - 1em);
+    }
+    p {
+      color: white;
+      font-size: 1.5em;
+    }
+  }
+  .form-address__input__last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      width: calc(30% - 1em);
+    }
+    p {
+      color: white;
+      font-size: 1.5em;
+      margin: 0;
+    }
+  }
+  .error-message {
+    color: red;
+    display: none;
+  }
+  .error-message__road {
+    text-align: center;
+  }
+  &--form-address__elevator {
+    margin-top: 2em;
+    p {
+      text-align: center;
+      color: white;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .elevator-wrap {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      // border-radius: $border-radius;
+      @include radius(30px);
+      .elevator-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin: 0 1em;
+        cursor: pointer;
+        color: white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          &:checked ~ .radio-checkmark {
+            background-color: $yellow;
+          }
+          &:checked ~ .radio-checkmark:after,
+          &:checked ~ .radio-checkmark:before {
+            display: block;
+            background-color: black;
+          }
+        }
+        .radio-checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #131313;
+          border-radius: 50%;
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          &:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 11px;
+            background-color: rgba(255, 255, 255, 0.05);
+            left: 12px;
+            top: 6px;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.05);
+            left: 9px;
+            top: 14px;
+          }
+        }
+        &:hover input ~ .radio-checkmark {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  &--form__warning {
+    width: 100%;
+    max-width: 240px;
+    margin: 12px auto;
+    p {
+      color: red;
+      text-align: center;
+    }
+  }
+  &--form__confirm {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4em;
+    #confirmAddress {
+      background-color: $yellow;
+      color: black;
+      padding: 1em 3.375em;
+      margin: 0 auto;
+      @include radius(25px);
+      &:hover {
+        outline: none;
+      }
+    }
+  }
+  &--policy {
+    padding: 0 1em;
+    .policy-content {
+      background: rgba(0, 0, 0, 0.29);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 1em 1em;
+      height: 450px;
+      overflow: hidden;
+      overflow-y: scroll;
+      font-size: 0.875em;
+      .break {
+        margin-bottom: 1.5em;
+      }
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          padding-left: 2em;
+        }
+      }
+    }
+    .policy-validation {
+      padding: 0 1em;
+      margin: 30px 0;
+      &__checkbox {
+        display: block;
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 0.875em;
+        color: white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          &:checked ~ span {
+            background: black;
+            border-color: black;
+            &:after {
+              display: block;
+            }
+          }
+        }
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background: none;
+          border: 2px solid white;
+          @include radius(5px);
+          &:after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 4px;
+            top: 0px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .policy-confirm {
+      padding: 0 0.2em;
+      a {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        color: white;
+        padding: 1em 0;
+        @include radius(10px);
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+        @include transition(all 0.3s);
+      }
+      .disabled {
+        background: rgba(146, 146, 146, 0.5);
+        color: gray;
+      }
+    }
+  }
+  &--tutorial {
+    .tutorial-text,
+    .tutorial-img,
+    .tutorial-img__wide {
+      padding: 0 4em;
+      text-align: center;
+      margin-top: 40px;
+      h1 {
+        color: $yellow;
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.125em;
+        color: white;
+      }
+    }
+    .tutorial-img {
+      margin-top: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    .tutorial-next {
+      text-align: center;
+      button {
+        padding: 0.875em 2.875em;
+        background: $yellow;
+        color: black;
+        @include radius(25px);
+      }
+    }
+    .tutorial-img__wide {
+      padding: 0 1em;
+    }
+    .tutorial-img__alt {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      img {
+        height: 75vh;
+        width: auto;
+      }
+    }
+    .tutorial-img__last {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      img {
+        height: 75vh;
+        width: auto;
+      }
+    }
+  }
+}

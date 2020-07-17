@@ -1,0 +1,14 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_select-plan.js' type="module")
+block backButton
+	p 服務選擇
+block main-content
+	.signup__select-plan.default-bg
+		a(href="special-plan-notice.html").plans#specialPlan
+			img(src="images/special-plan.png", alt="免等方案")
+			p 免等方案
+		a(href="normal-plan-notice.html").plans.normal-plan
+			img(src="images/normal-plan.png", alt="一般瓦斯")
+			p 一般瓦斯

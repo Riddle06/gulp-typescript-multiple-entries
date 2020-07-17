@@ -1,0 +1,29 @@
+extend base/index-layout.pug
+
+block script
+	script(src='js/layout_buy-gas-coupon.js' type="module")
+
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 存氣與優惠兌換
+block main-content
+	.buy-gas-exchange.default-bg
+		.buy-gas-exchange--existing-gas
+			.existing-gas
+				.existing-gas--img
+					img(src="images/coupon-gas.png")
+				p.existing-gas--gas-text 現有存氣
+				p.existing-gas--gas-size 55 kg
+			.existing-gas--exchange-btn
+				button 兌換一次
+		.buy-gas-exchange--exchange-coupon
+			.exchange-coupon
+				.exchange-coupon--img
+					img(src="images/coupon-exchange.png")
+				p.exchange-coupon--quantity-text 現有存氣
+				p.exchange-coupon--quantity
+			.exchange-coupon--exchange-btn
+				button 兌換一次
+		.buy-gas-exchange--no-exchange
+			button 暫時不兌換並下一步

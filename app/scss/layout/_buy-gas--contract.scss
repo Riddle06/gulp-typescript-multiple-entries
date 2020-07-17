@@ -1,0 +1,111 @@
+.buy-gas--contract {
+  position: relative;
+  width: calc(100% - 40px);
+  height: calc(100vh - 80px);
+  padding: 0 20px;
+  .contract {
+    margin-top: 2em;
+    @include radius(25px);
+    background: rgba(0, 0, 0, 0.29);
+    border: 3px solid #323232;
+    backdrop-filter: blur(4px);
+    padding: 1em;
+    max-height: 60vh;
+    overflow: hidden;
+    overflow-y: auto;
+    p {
+      color: white;
+      margin: 0;
+      font-size: 0.875em;
+      line-height: 1.5;
+    }
+    .break {
+      margin-bottom: 10px;
+    }
+    .indent {
+      margin-left: 2em;
+    }
+    ul {
+      color: white;
+      font-size: 0.875em;
+      padding: 0;
+      li {
+        color: white;
+        list-style: none;
+        padding-left: 2em;
+        line-height: 1.5;
+      }
+    }
+  }
+  .contract__input {
+    padding: 0 1em;
+    margin: 30px auto;
+    max-width: 180px;
+    &__checkbox {
+      display: block;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 0.875em;
+      color: white;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ span {
+          background: black;
+          border-color: black;
+          &:after {
+            display: block;
+          }
+        }
+      }
+      span {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background: none;
+        border: 2px solid white;
+        @include radius(5px);
+        &:after {
+          content: '';
+          position: absolute;
+          display: none;
+          left: 4px;
+          top: 0px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .contract__btn {
+    a {
+      display: block;
+      text-align: center;
+      padding: 1em 2em;
+      background: $yellow;
+      @include radius(12px);
+      color: black;
+      @include transition(all 0.3s);
+    }
+    .disabled {
+      background: rgba(146, 146, 146, 0.5);
+      color: gray;
+    }
+  }
+}

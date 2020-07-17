@@ -1,0 +1,20 @@
+extend base/index-layout.pug
+
+block script
+	//- script(src='js/layout_buy-gas-coupon.js' type="module")
+
+block backButton
+	a(href="#").back-button
+		img(src="images/Back.svg", alt="back")
+	p 優惠券選擇
+block main-content
+	.buy-gas-coupon.default-bg
+		.coupon
+			.coupon-img
+				img(src="images/coupon1.svg", alt="coupon")
+			.coupon-img
+				img(src="images/coupon2.svg", alt="coupon")
+			.coupon-img
+				img(src="images/coupon3.svg", alt="coupon")
+			.coupon-img
+				img(src="images/coupon4.svg", alt="coupon")
