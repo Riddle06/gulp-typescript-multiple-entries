@@ -1,5 +1,5 @@
-import { goBack } from './global/func.js';
-import { inputPlaceholder, ValidateForm, radioCheck } from './signup/func.js';
+import { goBack } from './global/func';
+import { inputPlaceholder, ValidateForm, radioCheck } from './signup/func';
 
 document.addEventListener('DOMContentLoaded', () => {
   goBack('.back-button');

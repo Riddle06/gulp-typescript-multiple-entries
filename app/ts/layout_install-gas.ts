@@ -1,6 +1,6 @@
-import { goBack, toggleSlide } from './global/func.js';
-import { priceChange, setInitalPrice } from './install-gas/func.js';
-import { GasInstall } from './install-gas/interface.js';
+import { goBack, toggleSlide } from './global/func';
+import { priceChange, setInitalPrice } from './install-gas/func';
+import { GasInstall } from './install-gas/interface';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.back-button')) {

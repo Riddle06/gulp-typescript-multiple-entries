@@ -1,5 +1,5 @@
-import { goBack } from './global/func.js';
-import { User } from './signup/interface.js';
+import { goBack } from './global/func';
+import { User } from './signup/interface';
 import {
   addCityOptions,
   // addDefaultCountyOptions,
@@ -8,7 +8,7 @@ import {
   addErrorMsg,
   userAddressConcat,
   radioCheck,
-} from './signup/func.js';
+} from './signup/func';
 
 document.addEventListener('DOMContentLoaded', () => {
   goBack('.back-button');

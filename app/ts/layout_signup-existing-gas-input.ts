@@ -1,4 +1,4 @@
-import { goBack } from './global/func.js';
+import { goBack } from './global/func';
 
 document.addEventListener('DOMContentLoaded', () => {
   goBack('.back-button');

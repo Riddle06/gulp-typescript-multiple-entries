@@ -12,6 +12,13 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
+const browserify = require("browserify");
+const source = require("vinyl-source-stream");
+const tsify = require("tsify");
+var babelify = require('babelify');
+const { glob } = require('glob');
+const es = require('event-stream')
+const rename = require('gulp-rename')
 
 gulp.task('pug', function () {
 	return gulp.src('app/pug/**/*.pug')
@@ -67,3 +74,35 @@ gulp.task('build', function (callback) {
 		callback
 	)
 });
+
+
+gulp.task('ts-new', (done) => {
+
+	// return browserify
+	// 	({
+	// 		entries: [fileNames]
+	// 	})
+	// 	.plugin(tsify, { noImplicitAny: true, target: 'es6' })
+	// 	.transform(babelify, { extensions: ['.tsx', '.ts'] })
+	// 	.bundle()
+	// 	.pipe(gulp.dest('dist'));
+
+
+	glob('./app/ts/layout_**.ts', (err, files) => {
+
+		if (err) done(err);
+
+		var tasks = files.map(function (entry) {
+			return browserify({ entries: [entry] })
+				.plugin(tsify, { noImplicitAny: true, target: 'es6' })
+				.transform(babelify, { extensions: ['.tsx', '.ts'] })
+				.bundle()
+				.pipe(source(entry))
+				.pipe(rename({
+					extname: '.bundle.js'
+				}))
+				.pipe(gulp.dest('./dist'));
+		});
+		es.merge(tasks).on('end', done);
+	})
+})

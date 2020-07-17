@@ -1,4 +1,4 @@
-import { goBack } from './global/func.js';
+import { goBack } from './global/func';
 import { validateDelivery } from './buy-gas-select-time/func.js';
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.back-button')) {

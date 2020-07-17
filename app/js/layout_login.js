@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { goBack } from './global/func.js';
+import { goBack } from './global/func';
 import { getLineTokenAndLogin, requestOtp } from './src/login/login.func.js';
 import { RequestOtpType } from './src/login/login.interface.js';
 document.addEventListener('DOMContentLoaded', () => {

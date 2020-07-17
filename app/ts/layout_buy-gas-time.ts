@@ -1,6 +1,6 @@
-import { goBack } from './global/func.js';
-import { validateDelivery } from './buy-gas-select-time/func.js';
-import { Delivery } from './buy-gas-select-time/interface.js';
+import { goBack } from './global/func';
+import { validateDelivery } from './buy-gas-select-time/func';
+import { Delivery } from './buy-gas-select-time/interface';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.back-button')) {

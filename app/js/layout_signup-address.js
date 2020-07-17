@@ -1,4 +1,4 @@
-import { goBack } from './global/func.js';
+import { goBack } from './global/func';
 import { addCityOptions, 
 // addDefaultCountyOptions,
 emptyList, populateList, addErrorMsg, userAddressConcat, radioCheck, } from './signup/func.js';

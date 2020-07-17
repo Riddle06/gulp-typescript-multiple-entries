@@ -1,4 +1,4 @@
-import { menuTransition } from './global/func.js';
+import { menuTransition } from './global/func';
 
 document.addEventListener('DOMContentLoaded', () => {
   menuTransition('.left-menu-btn', '.menu', 'left');

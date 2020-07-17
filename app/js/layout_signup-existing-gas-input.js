@@ -1,4 +1,4 @@
-import { goBack } from './global/func.js';
+import { goBack } from './global/func';
 document.addEventListener('DOMContentLoaded', () => {
     goBack('.back-button');
     //* 判定免等會員或一般會員

@@ -1,4 +1,4 @@
-import { goBack } from './global/func.js';
+import { goBack } from './global/func';
 import { exchangeFunc, couponExchangeFunc, initialDefault } from './buy-gas-coupon/func.js';
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.back-button')) {

@@ -1,6 +1,6 @@
-import { goBack } from './global/func.js';
-import { getLineTokenAndLogin, requestOtp } from './src/login/login.func.js';
-import { RequestOtpType } from './src/login/login.interface.js';
+import { goBack } from './global/func';
+import { getLineTokenAndLogin, requestOtp } from './src/login/login.func';
+import { RequestOtpType } from './src/login/login.interface';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.back-button')) {
