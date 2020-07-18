@@ -77,22 +77,30 @@ gulp.task('build', function (callback) {
 
 
 gulp.task('ts-new', (done) => {
-
+	// 利用 glob 指令找出需要打包的 TS 檔案
 	glob('./app/ts/layout_**.ts', (err, files) => {
 		if (err) done(err);
+
+		// 依序將檔案打包
 		var tasks = files.map(function (entry) {
+			// 利用 browserify 將多檔案引用變成一包
 			return browserify({
 				entries: [entry],
 			})
+				// 因為使用 typescript 開發所以要用 tsify 套件
 				.plugin(tsify)
+				// 將新的寫法改成早期的 => let , const , promise ㄋ
 				.transform(babelify, { extensions: ['.tsx', '.ts'] })
+				// 開始打包
 				.bundle()
 				.pipe(source(entry))
+				// 將打包的名稱加個後綴	
 				.pipe(rename({
-					dirname: './',
+					dirname: './', // 指定打包路徑，如果不設定為變成 ./app/js/app/ts
 					extname: '.bundle.js'
 				}))
-				.pipe(gulp.dest('./app/js', { relativeSymlinks: false }));
+				// 指定打包根目錄
+				.pipe(gulp.dest('./app/js'));
 		});
 		es.merge(tasks).on('end', done);
 	})
