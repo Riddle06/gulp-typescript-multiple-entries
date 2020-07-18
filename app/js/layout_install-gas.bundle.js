@@ -95,20 +95,20 @@ var gasPriceValue = 900;
 var installationPriceValue = 1900;
 //* 設定最初金額
 var setInitalPrice = exports.setInitalPrice = function setInitalPrice() {
-    defaultDepositPriceEl.innerHTML = '$' + numberWithCommas(depositPriceValue);
-    defaultDepositPriceList.innerHTML = '$' + numberWithCommas(depositPriceValue);
-    defaultGasPriceEl.innerHTML = '$' + numberWithCommas(gasPriceValue);
-    defaultGasPriceList.innerHTML = '$' + numberWithCommas(gasPriceValue);
-    defaultInstallPriceEl.innerHTML = '$' + numberWithCommas(installationPriceValue);
-    defaultInstallPriceList.innerHTML = '$' + numberWithCommas(installationPriceValue);
-    descriptionPriceEl.innerHTML = '$' + numberWithCommas(depositPriceValue);
+    defaultDepositPriceEl.innerHTML = "$" + numberWithCommas(depositPriceValue);
+    defaultDepositPriceList.innerHTML = "$" + numberWithCommas(depositPriceValue);
+    defaultGasPriceEl.innerHTML = "$" + numberWithCommas(gasPriceValue);
+    defaultGasPriceList.innerHTML = "$" + numberWithCommas(gasPriceValue);
+    defaultInstallPriceEl.innerHTML = "$" + numberWithCommas(installationPriceValue);
+    defaultInstallPriceList.innerHTML = "$" + numberWithCommas(installationPriceValue);
+    descriptionPriceEl.innerHTML = "$" + numberWithCommas(depositPriceValue);
     var initialDepositPriceVal = depositPriceValue;
     var initialInstallationPriceVal = installationPriceValue;
     var initialGasPriceVal = gasPriceValue;
     if (initialDepositEl.classList.contains('no-deposit')) {
-        totalPrice.innerHTML = '$' + (initialInstallationPriceVal + initialGasPriceVal).toString();
+        totalPrice.innerHTML = "$" + (initialInstallationPriceVal + initialGasPriceVal).toString();
     } else {
-        totalPrice.innerHTML = '$' + (initialDepositPriceVal + initialInstallationPriceVal + initialGasPriceVal).toString();
+        totalPrice.innerHTML = "$" + (initialDepositPriceVal + initialInstallationPriceVal + initialGasPriceVal).toString();
     }
 };
 //* 加減安裝包數量並計算金額
@@ -123,15 +123,15 @@ var priceChange = exports.priceChange = function priceChange(type) {
             installValue--;
             installationQuantity.innerHTML = installValue.toString();
             installValueEl.value = installValue.toString();
-            defaultInstallPriceList.innerHTML = '$' + (installationPriceValue * installValue).toString();
+            defaultInstallPriceList.innerHTML = "$" + (installationPriceValue * installValue).toString();
             gasQuantity.innerHTML = installValue.toString();
-            defaultGasPriceList.innerHTML = '$' + (gasPriceValue * installValue).toString();
+            defaultGasPriceList.innerHTML = "$" + (gasPriceValue * installValue).toString();
             if (initialDepositEl.classList.contains('no-deposit')) {
-                totalPrice.innerHTML = '$' + (installationPriceValue * installValue + gasPriceValue * installValue).toString();
+                totalPrice.innerHTML = "$" + (installationPriceValue * installValue + gasPriceValue * installValue).toString();
             } else {
                 depositQuantity.innerHTML = installValue.toString();
-                defaultDepositPriceList.innerHTML = '$' + (depositPriceValue * installValue).toString();
-                totalPrice.innerHTML = '$' + (installationPriceValue * installValue + gasPriceValue * installValue + depositPriceValue * installValue).toString();
+                defaultDepositPriceList.innerHTML = "$" + (depositPriceValue * installValue).toString();
+                totalPrice.innerHTML = "$" + (installationPriceValue * installValue + gasPriceValue * installValue + depositPriceValue * installValue).toString();
             }
         }
     }
@@ -139,15 +139,15 @@ var priceChange = exports.priceChange = function priceChange(type) {
         installValue++;
         installValueEl.value = installValue.toString();
         installationQuantity.innerHTML = installValue.toString();
-        defaultInstallPriceList.innerHTML = '$' + (installationPriceValue * installValue).toString();
+        defaultInstallPriceList.innerHTML = "$" + (installationPriceValue * installValue).toString();
         gasQuantity.innerHTML = installValue.toString();
-        defaultGasPriceList.innerHTML = '$' + (gasPriceValue * installValue).toString();
+        defaultGasPriceList.innerHTML = "$" + (gasPriceValue * installValue).toString();
         if (initialDepositEl.classList.contains('no-deposit')) {
-            totalPrice.innerHTML = '$' + (installationPriceValue * installValue + gasPriceValue * installValue).toString();
+            totalPrice.innerHTML = "$" + (installationPriceValue * installValue + gasPriceValue * installValue).toString();
         } else {
             depositQuantity.innerHTML = installValue.toString();
-            defaultDepositPriceList.innerHTML = '$' + (depositPriceValue * installValue).toString();
-            totalPrice.innerHTML = '$' + (installationPriceValue * installValue + gasPriceValue * installValue + depositPriceValue * installValue).toString();
+            defaultDepositPriceList.innerHTML = "$" + (depositPriceValue * installValue).toString();
+            totalPrice.innerHTML = "$" + (installationPriceValue * installValue + gasPriceValue * installValue + depositPriceValue * installValue).toString();
         }
     }
 };

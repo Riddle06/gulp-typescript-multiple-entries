@@ -78,30 +78,21 @@ gulp.task('build', function (callback) {
 
 gulp.task('ts-new', (done) => {
 
-	// return browserify
-	// 	({
-	// 		entries: [fileNames]
-	// 	})
-	// 	.plugin(tsify, { noImplicitAny: true, target: 'es6' })
-	// 	.transform(babelify, { extensions: ['.tsx', '.ts'] })
-	// 	.bundle()
-	// 	.pipe(gulp.dest('dist'));
-
-
 	glob('./app/ts/layout_**.ts', (err, files) => {
-
 		if (err) done(err);
-
 		var tasks = files.map(function (entry) {
-			return browserify({ entries: [entry] })
-				.plugin(tsify, { noImplicitAny: true, target: 'es6' })
+			return browserify({
+				entries: [entry],
+			})
+				.plugin(tsify)
 				.transform(babelify, { extensions: ['.tsx', '.ts'] })
 				.bundle()
 				.pipe(source(entry))
 				.pipe(rename({
+					dirname: './',
 					extname: '.bundle.js'
 				}))
-				.pipe(gulp.dest('./dist'));
+				.pipe(gulp.dest('./app/js', { relativeSymlinks: false }));
 		});
 		es.merge(tasks).on('end', done);
 	})

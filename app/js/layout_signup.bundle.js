@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var signupTelButtonConfirm = document.querySelector('#signupTelBtn');
     if (signupTelButtonConfirm) {
         signupTelButtonConfirm.addEventListener('click', function (e) {
-            var phoneNUmber = void 0;
+            var phoneNUmber;
             e.preventDefault();
             if (signupTelButton.value === '') {
                 alert('請輸入電話');
@@ -178,9 +178,9 @@ var inputPlaceholder = exports.inputPlaceholder = function inputPlaceholder(el, 
         var placeholder = document.querySelector(placeholderEl);
         var op = 1;
         if (e.target.value !== '') {
-            var _timer = setInterval(function () {
+            var timer_1 = setInterval(function () {
                 if (op <= 0.1) {
-                    clearInterval(_timer);
+                    clearInterval(timer_1);
                     placeholder.style.display = 'none';
                 }
                 placeholder.style.opacity = op.toString();

@@ -76,20 +76,71 @@ var toggleSlide = exports.toggleSlide = function toggleSlide(el) {
 var _func = require('./global/func');
 
 document.addEventListener('DOMContentLoaded', function () {
-    if (document.querySelector('.back-button')) {
-        (0, _func.goBack)('.back-button');
-    }
-    var contractAgreeBtn = document.querySelector('.contract__btn a');
-    var contractAgreeCheckbox = document.querySelector('#contractAgreeCheckbox');
-    contractAgreeCheckbox.addEventListener('click', function () {
-        if (this.checked) {
-            contractAgreeBtn.setAttribute('href', '#');
-            contractAgreeBtn.classList.remove('disabled');
-        } else {
-            contractAgreeBtn.removeAttribute('href');
-            contractAgreeBtn.classList.add('disabled');
-        }
+    (0, _func.goBack)('.back-button');
+    //* 判定免等會員或一般會員
+    var normalExistingGas = document.querySelector('#signupGasInput');
+    var specialExistingGas = document.querySelector('#signupGasSpecialInput');
+    //* Popup
+    var signupCheckGasPopupBtn = document.querySelector('#signupCheckGasPopup');
+    var signupCheckGasPopup = document.querySelector('.signup__check-gas--popup');
+    signupCheckGasPopupBtn.addEventListener('click', function () {
+        signupCheckGasPopup.style.display = 'none';
     });
+    //* 一般會員
+    if (normalExistingGas) {
+        //* 選則瓦斯桶數量
+        var checkGasInputDecBtn = document.querySelector('#gasInputDecBtn');
+        var checkGasInputIncBtn = document.querySelector('#gasInputIncBtn');
+        var checkGasValueEl_1 = document.querySelector('#gasInputValue');
+        var signupInputGas = document.querySelector('#signupGasInput');
+        var checkGasValue_1 = +checkGasValueEl_1.value;
+        checkGasInputDecBtn.addEventListener('click', function () {
+            if (checkGasValue_1 !== 0) {
+                checkGasValue_1--;
+            }
+            checkGasValueEl_1.value = checkGasValue_1.toString();
+        });
+        checkGasInputIncBtn.addEventListener('click', function () {
+            checkGasValue_1++;
+            checkGasValueEl_1.value = checkGasValue_1.toString();
+        });
+        signupInputGas.addEventListener('click', function () {
+            //TODO Send to API function
+            console.log(checkGasValue_1);
+        });
+    }
+    //* 免等會員
+    if (specialExistingGas) {
+        var inputs = document.querySelectorAll('input');
+        Array.prototype.forEach.call(inputs, function (input) {
+            input.addEventListener('change', function (e) {
+                var fileName = e.target.value.split('\\').pop();
+                this.nextElementSibling.innerHTML = fileName;
+            });
+        });
+        var confirmBtn = document.querySelector('#signupGasSpecialInput');
+        var imagesBase64Arr_1 = [];
+        var getBase64_1 = function getBase64_1(event) {
+            var file = event.files[0];
+            var reader = new FileReader();
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+            reader.onload = function () {
+                imagesBase64Arr_1.push(reader.result);
+            };
+            reader.onerror = function (error) {
+                console.log('Error: ', error);
+            };
+        };
+        confirmBtn.addEventListener('click', function () {
+            //TODO Send to API function
+            var file1 = document.querySelector('#gasCan1');
+            var file2 = document.querySelector('#gasCan2');
+            getBase64_1(file1);
+            getBase64_1(file2);
+        });
+    }
 });
 
 },{"./global/func":1}]},{},[2]);

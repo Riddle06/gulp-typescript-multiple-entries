@@ -17,7 +17,7 @@ var couponLength = 3;
 var initialGasSize = document.querySelector('.existing-gas--gas-size');
 var initialCouponLength = document.querySelector('.exchange-coupon--quantity');
 var initialDefault = exports.initialDefault = function initialDefault() {
-    initialGasSize.innerHTML = gasSize + ' kg';
+    initialGasSize.innerHTML = gasSize + " kg";
     initialCouponLength.innerHTML = couponLength.toString();
 };
 var gasExchange = false;
@@ -43,7 +43,7 @@ var exchangeFunc = exports.exchangeFunc = function exchangeFunc(bodyTarget) {
     if (!gasExchange) {
         existingGasExchangeBtn.innerHTML = '兌換一次';
         existingGasExchangeText.innerHTML = '現有存氣';
-        existingGasExchangeSize.innerHTML = gasSize + ' kg';
+        existingGasExchangeSize.innerHTML = gasSize + " kg";
     }
     return gasExchange;
 };

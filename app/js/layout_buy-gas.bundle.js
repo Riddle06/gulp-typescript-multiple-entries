@@ -76,71 +76,47 @@ var toggleSlide = exports.toggleSlide = function toggleSlide(el) {
 var _func = require('./global/func');
 
 document.addEventListener('DOMContentLoaded', function () {
-    (0, _func.goBack)('.back-button');
-    //* 判定免等會員或一般會員
-    var normalExistingGas = document.querySelector('#signupGasInput');
-    var specialExistingGas = document.querySelector('#signupGasSpecialInput');
-    //* Popup
-    var signupCheckGasPopupBtn = document.querySelector('#signupCheckGasPopup');
-    var signupCheckGasPopup = document.querySelector('.signup__check-gas--popup');
-    signupCheckGasPopupBtn.addEventListener('click', function () {
-        signupCheckGasPopup.style.display = 'none';
+    (0, _func.menuTransition)('.left-menu-btn', '.menu', 'left');
+    (0, _func.menuTransition)('.cube', '.right-menu', 'right');
+    var buyGasInputValue = document.querySelector('#buyGasInputValue');
+    var buyGasInputDecBtn = document.querySelector('#buyGasInputDecBtn');
+    var buyGasInputIncBtn = document.querySelector('#buyGasInputIncBtn');
+    var buyGasPriceCount = document.querySelector('.price-count--confirm');
+    var buyGasPrice = document.querySelector('.price-count--confirm__total');
+    var buyGasInitialPrice = document.querySelector('.special-can--price');
+    //TODO Get value from API function
+    var fixedPrice = 606;
+    //* 初始化價錢
+    buyGasInitialPrice.innerHTML = "$" + fixedPrice;
+    //* 顯示金額
+    var showPrice = function showPrice() {
+        if (checkGasValue > 0) {
+            buyGasPriceCount.classList.add('price-count--confirm__show');
+        } else {
+            buyGasPriceCount.classList.remove('price-count--confirm__show');
+        }
+    };
+    //* 選則瓦斯桶數量
+    var checkGasValue = +buyGasInputValue.value;
+    var totalPrice;
+    buyGasInputDecBtn.addEventListener('click', function () {
+        if (checkGasValue !== 0) {
+            checkGasValue--;
+        }
+        totalPrice = fixedPrice * checkGasValue;
+        buyGasPrice.innerHTML = "$" + totalPrice;
+        showPrice();
+        buyGasInputValue.value = checkGasValue.toString();
+        console.log(checkGasValue);
     });
-    //* 一般會員
-    if (normalExistingGas) {
-        //* 選則瓦斯桶數量
-        var checkGasInputDecBtn = document.querySelector('#gasInputDecBtn');
-        var checkGasInputIncBtn = document.querySelector('#gasInputIncBtn');
-        var checkGasValueEl = document.querySelector('#gasInputValue');
-        var signupInputGas = document.querySelector('#signupGasInput');
-        var checkGasValue = +checkGasValueEl.value;
-        checkGasInputDecBtn.addEventListener('click', function () {
-            if (checkGasValue !== 0) {
-                checkGasValue--;
-            }
-            checkGasValueEl.value = checkGasValue.toString();
-        });
-        checkGasInputIncBtn.addEventListener('click', function () {
-            checkGasValue++;
-            checkGasValueEl.value = checkGasValue.toString();
-        });
-        signupInputGas.addEventListener('click', function () {
-            //TODO Send to API function
-            console.log(checkGasValue);
-        });
-    }
-    //* 免等會員
-    if (specialExistingGas) {
-        var inputs = document.querySelectorAll('input');
-        Array.prototype.forEach.call(inputs, function (input) {
-            input.addEventListener('change', function (e) {
-                var fileName = e.target.value.split('\\').pop();
-                this.nextElementSibling.innerHTML = fileName;
-            });
-        });
-        var confirmBtn = document.querySelector('#signupGasSpecialInput');
-        var imagesBase64Arr = [];
-        var getBase64 = function getBase64(event) {
-            var file = event.files[0];
-            var reader = new FileReader();
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-            reader.onload = function () {
-                imagesBase64Arr.push(reader.result);
-            };
-            reader.onerror = function (error) {
-                console.log('Error: ', error);
-            };
-        };
-        confirmBtn.addEventListener('click', function () {
-            //TODO Send to API function
-            var file1 = document.querySelector('#gasCan1');
-            var file2 = document.querySelector('#gasCan2');
-            getBase64(file1);
-            getBase64(file2);
-        });
-    }
+    buyGasInputIncBtn.addEventListener('click', function () {
+        checkGasValue++;
+        buyGasInputValue.value = checkGasValue.toString();
+        totalPrice = fixedPrice * checkGasValue;
+        buyGasPrice.innerHTML = "$" + totalPrice;
+        showPrice();
+        console.log(checkGasValue);
+    });
 });
 
 },{"./global/func":1}]},{},[2]);
